@@ -1,0 +1,8 @@
+[
+	{ "keys": ["f1"], "command": "build" },
+	{ "keys": ["ctrl+k+f"], "command": "reindent" },
+	{ "keys": ["f2"], "command": "build", "args": {"variant": "Terminal"} },
+	{ "keys": ["f5"], "command": "build", "args": {"variant": "Input file"} },
+	{ "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+	{ "keys": ["ctrl+f5"], "command": "exec", "args": {"kill": true} }
+]

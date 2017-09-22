@@ -1,0 +1,15 @@
+VirtualBox GUI VM Selector Window 5.1.28 r117968 linux.amd64 (Sep 14 2017 22:01:36) release log
+00:00:00.226945 Log opened 2017-09-19T01:08:30.770934000Z
+00:00:00.226946 Build Type: release
+00:00:00.226947 OS Product: Linux
+00:00:00.226948 OS Release: 4.12.13-1-ARCH
+00:00:00.226949 OS Version: #1 SMP PREEMPT Fri Sep 15 06:36:43 UTC 2017
+00:00:00.226967 DMI Product Name: Latitude E6230
+00:00:00.226973 DMI Product Version: 01
+00:00:00.227011 Host RAM: 3829MB (3.7GB) total, 2161MB (2.1GB) available
+00:00:00.227014 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.227014 Process ID: 20085
+00:00:00.227015 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.227038 Qt version: 5.9.1
+00:00:00.232709 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.317507 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 686x28 x 335x729

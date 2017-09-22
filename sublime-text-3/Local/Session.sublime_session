@@ -1,0 +1,478 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3126,
+	"last_window_id": 5,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 0.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"arr",
+						"array"
+					],
+					[
+						"en",
+						"endl"
+					],
+					[
+						"ar",
+						"arrdel"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"contents": "#include <iostream>\n#include <algorithm>\n#include <fstream>\nusing namespace std;\nlong long int *arr ,*arrdel;\nint temp,a,b;\nbool notSame(int j)\n{\n    for (int i = 0; i < b; ++i)\n    {\n    \tif (arr[j]==arrdel[i])\n    \t\treturn false;\n    }\n\treturn true;\n}\nvoid insertionSort(int n)\n{\n   int i, key, j;\n   for (i = 1; i < n; i++)\n   {\n       key = arr[i];\n       j = i-1;\n       while (j >= 0 && arr[j] > key)\n       {\n           arr[j+1] = arr[j];\n           j = j-1;\n       }\n       arr[j+1] = key;\n   }\n}\nint main(int argc, char const *argv[])\n{\n\n\ta = 402;\n\tarr = new long long int(a);\n\t// arrdel = new unsigned long int(b);\n\tfor (int i = 0; i < a; ++i)\n\t{\n\t\tcin >> arr[i];\n\t}\n\t// ifstream infile;\n\t// infile.open(\"delete.txt\");\n\t// for (int i = 0; i < b; ++i)\n\t// {\n\t// \tinfile >> arrdel[i];\n\t// }\n\t// infile.close();\n\tinsertionSort(a);\n\n\tofstream myfile;\n\t  myfile.open (\"output.txt\");\n\t  for (int i =0; i < a; ++i)\n\t  {\n\n\t  \tif (arr[i]!=arr[i-1])\n\t  \t{\n\t  \t\t\tmyfile<<0<<arr[i]<<endl;\n\t  \t\t\tcout<< arr[i]<<endl;\n\t  \t}\n\t  }\n\t  myfile.close();\n\t  printf(\"%s\\n\", );\n\treturn 0;\n}",
+					"file": "/root/sdt/main.cpp",
+					"file_size": 1056,
+					"file_write_time": 131468373390410973,
+					"settings":
+					{
+						"buffer_size": 1077,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/root/sdt/convert.cpp",
+					"settings":
+					{
+						"buffer_size": 807,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/root/sdt/main",
+					"settings":
+					{
+						"buffer_size": 35880,
+						"encoding": "Hexadecimal",
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/User/Build.sublime-build",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/Build.sublime-build",
+							""
+						],
+						[
+							"Packages/User/Build.sublime-build",
+							"Terminal"
+						],
+						[
+							"Packages/User/Build.sublime-build",
+							"Input file"
+						]
+					],
+					[
+						"Packages/User/Build.sublime-build",
+						"Input file"
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/root/sdt/main",
+				"/root/.config/sublime-text-3/Packages/User/Build.sublime-build"
+			],
+			"find":
+			{
+				"height": 25.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"59",
+					"arr"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/root/sdt/main.cpp",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1077,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1062,
+										1062
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 799.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/root/sdt/convert.cpp",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 807,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										573,
+										573
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 459.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/root/sdt/main",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 35880,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 25.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 226.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,0,0,0,458,28,909,759,1366,768",
+			"project": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

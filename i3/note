@@ -1,0 +1,14 @@
+bumblebee
+
+pip install psutil
+#________________________________
+CHECK
+
+
+./bumblebee-status 
+./bumblebee-status -l themes
+./bumblebee-status -l modules
+
+pacman -S feh //exec_always --no-startup-id feh --bg-scale /root/.config/wall.png
+pacman -Syu xcompmgr
+yaourt tty-font-awesome

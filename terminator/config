@@ -1,0 +1,31 @@
+[global_config]
+  broadcast_default = off
+  dbus = False
+  enabled_plugins = ,
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#000000"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.91
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#c17d11"
+    icon_bell = False
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+  [[temp]]
+    cursor_color = "#aaaaaa"
+    use_theme_colors = True
