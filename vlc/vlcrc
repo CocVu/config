@@ -4050,7 +4050,7 @@ qt-privacy-ask=0
 #loop=0
 
 # Repeat current item (boolean)
-#repeat=0
+repeat=1
 
 # Play and exit (boolean)
 #play-and-exit=0

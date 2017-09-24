@@ -1,7 +1,7 @@
 #Needed for i3-gaps
 #hide_edge_borders both
 #hide_edge_borders <none|vertical|horizontal|both>
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 #for_window [class="^.*"] border pixel 0 
 gaps inner 5 
 gaps outer 5

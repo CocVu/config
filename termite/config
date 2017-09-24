@@ -13,6 +13,6 @@ search_wrap = true
 filter_unmatched_urls = true
 
 [colors]
-background = rgba(63, 63, 63, 0.8)
+background = rgba(7, 5, 0, 0.8)
 
 highlight = #2758ba

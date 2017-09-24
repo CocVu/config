@@ -5,28 +5,45 @@ nnoremap K i<CR><Esc>
 nnoremap <c-l> gg=G `. 
 inoremap <c-l> <Esc> gg=G `^ <CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <Leader>q q 
+"record key leader q disable record q
+" nnoremap q :echo filename <CR>
 nnoremap <Leader>\| :TableModeToggle<CR>
 noremap  <Leader>l :tabn<CR> 
 noremap  <Leader>h :tabp<CR>
 noremap  <Leader>o :tabnew<CR>
 noremap  <Leader>x :tabclose<CR>
+noremap  <Leader>v :call ToggleMouse()<CR>
+noremap  <Leader>y "+y
 map <Leader> <Plug>(easymotion-prefix)
 set number 
 set relativenumber 
 set nocompatible
 set encoding=utf-8
-highlight Pmenu ctermfg=15 ctermbg=4 guifg=#ffffff guibg=#0a0468 "highlight ycm
+
+" +--------------+
+" | TOGGLE MOUSE |
+" +--------------+
+function! ToggleMouse()
+	if &mouse == 'a'
+		set mouse=
+	else
+		set mouse=a
+	endif
+endfunc
+
 filetype off
+
 " +------------+
 " | POWER LINE |
-" +============+
+" +------------+
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/   
 set laststatus=2                                                            
 set t_Co=256
+
 " +--------+
 " | PLUGIN |
-" +========+
-
+" +--------+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -45,27 +62,30 @@ Plugin 'easymotion/vim-easymotion' 	"easy motion Leader Leader j or k
 Plugin 'scrooloose/nerdcommenter' 	"commnent Leader cc cu ma md
 Plugin 'artur-shaik/vim-javacomplete2'  "java complete
 Plugin 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'} 	" || && Leader |
+Plugin 'dim13/smyck.vim' 	 	" color
+Plugin 'nightsense/willy' 	 	" color for terminal
 call vundle#end()            
 filetype plugin indent on    
 call pathogen#infect()
 call pathogen#helptags()
 syntax enable
+colors smyck
 
 " +-------+
 " | TABLE |
-" +=======+
+" +-------+
 let g:table_mode_corner='|'
 let g:table_mode_corner_corner='+'
-let g:table_mode_header_fillchar='='
+let g:table_mode_header_fillchar='-'
 
 " +---------------+
 " | AUTO COMPLETE |
-" +===============+
+" +---------------+
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " +------------+
 " | SUPPER TAB |
-" +============+
+" +------------+
 au FileType java setlocal omnifunc=javacomplete#Complete
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
@@ -76,7 +96,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " +---------+
 " | COMMENT |
-" +=========+
+" +---------+
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
@@ -87,7 +107,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " +--------+
 " | BUFFER |
-" +========+
+" +--------+
 au BufNewFile,BufRead *.py,*.c,*.cpp,*.scala,*.java,*.java
 			\ set tabstop=4 |
 			\ set softtabstop=4 |
@@ -101,24 +121,20 @@ au BufNewFile,BufRead *.js, *.html, *.css
 			\ set softtabstop=2 |
 			\ set shiftwidth=2
 
-" +-------+
-" | SPLIT |
-" +=======+
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-
 " +---------+
 " | COMPILE |
-" +=========+
+" +---------+
 au Filetype python  nnoremap <F5> :w <CR> :!clear && python  % <CR>
+au Filetype python  nnoremap q :w <CR> :!clear && python  % <CR>
 au Filetype python  inoremap <F5> <Esc>:w <CR> :!clear && python  % <CR>
 au Filetype c,cpp  nnoremap <F5>  :w <CR> :call CompileCpp() <CR>
 au Filetype c,cpp  inoremap <F5>  <Esc>:w <CR> :call CompileCpp() <CR>
 au Filetype c,cpp  nnoremap <F10>  :w <CR> :!clear && g++  % -o %:r && ./%:r <CR>
 au Filetype c,cpp  inoremap <F10>  <Esc>:w <CR> :!clear && g++  % -o %:r && ./%:r <CR>
+" au Filetype java  nnoremap <F5>  :w <CR>:call CompileJava() <CR>
 au Filetype java  nnoremap <F5>  :w <CR>:call CompileJava() <CR>
+" command! -complete=shellcmd  B call s:ExecuteInShell("clear && g++  % -o %:r && %:p:r")
+nnoremap <F4> :call s:ExecuteInShell("clear && g++  % -o %:r && %:p:r")<CR>
 au Filetype java  inoremap <F5>  <Esc>:w <CR>:call CompileJava() <CR>
 au Filetype java  nnoremap <F10>  :w <CR> :!clear && javac %  && java  %:r <CR>
 au Filetype java  inoremap <F10> <Esc> :w <CR> :!clear && javac %  && java  %:r <CR>
@@ -127,7 +143,7 @@ au Filetype txt  inoremap <F5> <Esc> :e! <CR>
 au Filetype scala  nnoremap <F5>  :!clear && scalac %  && scala  %:r <CR>
 function! CompileCpp()
 	if !empty(glob("input"))
-		:!clear && g++  % -o %:r && ./%:r<input
+		:!clear && g++  % -o %:r && ./%:r<input 
 	else
 		:!clear && g++  % -o %:r && ./%:r
 	endif
@@ -142,8 +158,7 @@ endfunction
 
 " +---------+
 " | COMMENT |
-" +=========+
-" Commenting blocks of code.
+" +---------+
 " autocmd FileType c,cppva,scala let b:comment_leader = '// '
 " autocmd FileType sh,ruby,python   let b:comment_leader = '# '
 " autocmd FileType conf,fstab       let b:comment_leader = '# '
@@ -155,24 +170,27 @@ endfunction
 
 " +-------------+
 " | EASY MOTION |
-" +=============+
+" +-------------+
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
-
-" <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to line
-" map <Leader>L <Plug>(easymotion-bd-jk)
-" nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 map  <Leader>f <Plug>(easymotion-bd-w)
 nmap <Leader>f <Plug>(easymotion-overwin-w)
-set mouse+=a
+
+function! s:ExecuteInShell(command)
+	let command = join(map(split(a:command), 'expand(v:val)'))
+	let winnr = bufwinnr('^' . command . '$')
+	silent! execute  winnr < 0 ? 'botright vnew ' . fnameescape(command) : winnr . 'wincmd w'
+	setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap number
+	silent! execute 'silent %!'. command
+	silent! execute 'resize '
+	silent! redraw
+	silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
+	silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>'
+	echo 'Shell command ' . command . ' executed.'
+endfunction
+command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)]

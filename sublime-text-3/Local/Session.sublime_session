@@ -159,36 +159,6 @@
 			},
 			"buffers":
 			[
-				{
-					"contents": "#include <iostream>\n#include <algorithm>\n#include <fstream>\nusing namespace std;\nlong long int *arr ,*arrdel;\nint temp,a,b;\nbool notSame(int j)\n{\n    for (int i = 0; i < b; ++i)\n    {\n    \tif (arr[j]==arrdel[i])\n    \t\treturn false;\n    }\n\treturn true;\n}\nvoid insertionSort(int n)\n{\n   int i, key, j;\n   for (i = 1; i < n; i++)\n   {\n       key = arr[i];\n       j = i-1;\n       while (j >= 0 && arr[j] > key)\n       {\n           arr[j+1] = arr[j];\n           j = j-1;\n       }\n       arr[j+1] = key;\n   }\n}\nint main(int argc, char const *argv[])\n{\n\n\ta = 402;\n\tarr = new long long int(a);\n\t// arrdel = new unsigned long int(b);\n\tfor (int i = 0; i < a; ++i)\n\t{\n\t\tcin >> arr[i];\n\t}\n\t// ifstream infile;\n\t// infile.open(\"delete.txt\");\n\t// for (int i = 0; i < b; ++i)\n\t// {\n\t// \tinfile >> arrdel[i];\n\t// }\n\t// infile.close();\n\tinsertionSort(a);\n\n\tofstream myfile;\n\t  myfile.open (\"output.txt\");\n\t  for (int i =0; i < a; ++i)\n\t  {\n\n\t  \tif (arr[i]!=arr[i-1])\n\t  \t{\n\t  \t\t\tmyfile<<0<<arr[i]<<endl;\n\t  \t\t\tcout<< arr[i]<<endl;\n\t  \t}\n\t  }\n\t  myfile.close();\n\t  printf(\"%s\\n\", );\n\treturn 0;\n}",
-					"file": "/root/sdt/main.cpp",
-					"file_size": 1056,
-					"file_write_time": 131468373390410973,
-					"settings":
-					{
-						"buffer_size": 1077,
-						"encoding": "UTF-8",
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/root/sdt/convert.cpp",
-					"settings":
-					{
-						"buffer_size": 807,
-						"encoding": "UTF-8",
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/root/sdt/main",
-					"settings":
-					{
-						"buffer_size": 35880,
-						"encoding": "Hexadecimal",
-						"line_ending": "Unix"
-					}
-				}
 			],
 			"build_system": "Packages/User/Build.sublime-build",
 			"build_system_choices":
@@ -250,7 +220,10 @@
 			},
 			"file_history":
 			[
+				"/home/coc/Downloads/test5_CNPM.jpg",
+				"/root/sdt/main.cpp",
 				"/root/sdt/main",
+				"/root/sdt/convert.cpp",
 				"/root/.config/sublime-text-3/Packages/User/Build.sublime-build"
 			],
 			"find":
@@ -292,88 +265,10 @@
 					"sheets":
 					[
 						{
-							"buffer": 0,
-							"file": "/root/sdt/main.cpp",
+							"file": "/home/coc/Downloads/abc.jpg",
 							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1077,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1062,
-										1062
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/C++/C++.sublime-syntax"
-								},
-								"translation.x": 0.0,
-								"translation.y": 799.0,
-								"zoom_level": 1.0
-							},
 							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/root/sdt/convert.cpp",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 807,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										573,
-										573
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/C++/C++.sublime-syntax"
-								},
-								"translation.x": 0.0,
-								"translation.y": 459.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/root/sdt/main",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 35880,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
+							"type": "image"
 						}
 					]
 				}
@@ -418,7 +313,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,458,28,909,759,1366,768",
+			"position": "0,0,0,0,0,913,28,1355,757,1366,768",
 			"project": "",
 			"replace":
 			{
