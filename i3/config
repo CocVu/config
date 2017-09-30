@@ -20,13 +20,8 @@ font pango:LiberationMono Sans Mono, Icons 11
 exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-bar {
-        font pango:Inconsolata 8
-        position top
-        tray_output none
-	status_command ~/.config/i3/bumblebee-status/bumblebee-status -m github nic cpu memory battery date time pasink pasource -p  time.format="%H:%M " date.format="%a, %b %d " memory.format="{used}" -t solarized-powerline
-	# status_command i3status
-}
+
+exec_always 			exec bash ~/.config/polybar/launch.sh
 
 
 bindsym $mod+Return 		exec $term
@@ -38,22 +33,10 @@ bindsym $mod+space		focus mode_toggle
 bindsym $mod+Escape		exec --no-startup-id xset -display :0.0 dpms force off
 bindsym $mod+Shift+Escape 	exec i3-msg exit
 
-#bindsym $mod+BackSpace		exec $term
 bindsym $mod+Shift+BackSpace	exec reboot
 
 bindsym $mod+Tab		workspace back_and_forth
 
-#bindsym $mod+grave
-#bindsym $mod+asciitilde
-
-#bindsym $mod+XF86Back	
-#bindsym $mod+Shift+XF86Back	
-
-#bindsym $mod+XF86Forward
-#bindsym $mod+Shift+XF86Forward	
-#END
-
-#Letter Keys
 
 bindsym $mod+q		kill
 
