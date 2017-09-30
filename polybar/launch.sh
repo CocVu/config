@@ -7,6 +7,6 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch top-bar
-polybar default &
+polybar top &
 
 echo "Bars launched..."
