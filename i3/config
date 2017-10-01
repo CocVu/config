@@ -2,7 +2,6 @@
 #hide_edge_borders both
 #hide_edge_borders <none|vertical|horizontal|both>
 for_window [class="^.*"] border pixel 3
-#for_window [class="^.*"] border pixel 0 
 gaps inner 5 
 gaps outer 5
 
@@ -15,21 +14,20 @@ set $browser firefox
 set $screencast  ffmpeg -y -f x11grab -video_size 1280x800 -i :0.0 -f alsa -i default -c:v ffvhuff -r 30 -c:a flac output.mkv
 set $audio ffmpeg -f alsa -i default -c:a flac -y output.flac
 font pango:LiberationMono Sans Mono, Icons 11
-#font pango:envypn 11
 #set $mail icedove
 exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
 exec_always 	bash ~/.keyboard 
 
-bar {
-        font pango:Inconsolata 8
-        position top
-        tray_output none
-	status_command i3status
-}
+# bar {
+#         font pango:Inconsolata 8
+#         position top
+#         tray_output none
+#         status_command i3status
+# }
 
-# exec_always 			exec bash ~/.config/polybar/launch.sh
+exec_always 			exec bash ~/.config/polybar/launch.sh
 
 
 bindsym $mod+Return 		exec $term
@@ -81,7 +79,8 @@ bindsym $mod+a		exec $term -e qalc
 bindsym $mod+s		gaps inner current plus 5
 bindsym $mod+Shift+s	gaps inner current minus 5
 
-bindsym $mod+d		exec dmenu_run
+# bindsym $mod+d		exec dmenu_run
+bindsym $mod+d		exec rofi -show run
 	
 #bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
 
