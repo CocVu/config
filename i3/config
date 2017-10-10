@@ -1,6 +1,3 @@
-#Needed for i3-gaps
-#hide_edge_borders both
-#hide_edge_borders <none|vertical|horizontal|both>
 for_window [class="^.*"] border pixel 3
 gaps inner 5 
 gaps outer 5
@@ -18,7 +15,7 @@ font pango:LiberationMono Sans Mono, Icons 11
 exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-exec_always 	bash ~/.keyboard 
+exec_always 			exec bash ~/keyboard.sh 
 
 # bar {
 #         font pango:Inconsolata 8
@@ -53,25 +50,16 @@ bindsym $mod+e		exec evince
 #bindsym $mod+Shift+e	exec $mail
 
 bindsym $mod+r 		exec $term -e ranger
-#bindsym $mod+Shift+r	restart
 
-#bindsym $mod+t		split toggle
-#bindsym $mod+Shift+t	gaps inner all set 15; gaps outer all set 15
-
-#bindsym $mod+y		exec 
 bindsym $mod+Shift+y	resize shrink width 10 px or 10ppt
 
 #bindsym $mod+u
 bindsym $mod+Shift+u	resize shrink height 10 px or 10 ppt
 
-#bindsym $mod+i 		exec $term -e htop
 bindsym $mod+Shift+i	resize grow height 10 px or 10 ppt
 
-#bindsym $mod+o		exec --no-startup-id mocp -j 0%
 bindsym $mod+Shift+o	resize grow width 10 px or 10 ppt
 
-#bindsym $mod+p		exec --no-startup-id mocp -G
-#bindsym $mod+Shift+p	exec pinta
 
 bindsym $mod+a		exec $term -e qalc
 #bindsym $mod+Shift+a	exec audacity
@@ -81,7 +69,7 @@ bindsym $mod+Shift+s	gaps inner current minus 5
 
 # bindsym $mod+d		exec dmenu_run
 bindsym $mod+d		exec rofi -show run
-	
+
 #bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
 
 bindsym $mod+f		fullscreen toggle
@@ -117,40 +105,18 @@ bindsym $mod+Shift+c	reload
 bindsym $mod+v		split v  exec $term
 bindsym $mod+Shift+v	split h  exec $term
 
-#bindsym $mod+b		exec --no-startup-id mocp -r
-#bindsym $mod+Shift+b	exec --no-startup-id blender; workspace $ws6
-
-#bindsym $mod+n		exec --no-startup-id mocp -f
-#bindsym $mod+Shift+n	exec java -Xmx256m -Xms64m -jar ~/.config/TreeForm/TreeForm.jar
-
-#bindsym $mod+m 		exec $term -e mocp
-#bindsym $mod+Shift+m	exec --no-startup-id pamixer -t
 #END
 
 #Function Buttons
-#bindsym F1  exec stardict -h	
+bindsym $mod+Shift+F1  exec poweroff 
 bindsym F2  exec $term -e qalc
 
-#bindsym F3 exec --no-startup-id echo "help" > /dev/null
-#bindsym F4
-#bindsym F5
-#bindsym F6
-#bindsym F7
-#bindsym F8
-#bindsym F9
-#bindsym F10
 bindsym F11		fullscreen toggle
-#bindsym F12
 
-#bindsym $mod+F1	exec sudo systemctl suspend
-
-#bindsym $mod+F2
 bindsym $mod+F3		exec arandr
 #bindsym $mod+F4	
 bindsym $mod+F5		exec sudo systemctl restart NetworkManager
-#bindsym $mod+F6
-#bindsym $mod+F7
-#bindsym $mod+F8
+
 bindsym $mod+F9		exec --no-startup-id sudo bash ~/.config/i3/mount.sh
 bindsym $mod+F10	exec --no-startup-id sudo bash ~/.config/i3/unmount.sh
 #bindsym $mod+F11	
@@ -203,48 +169,6 @@ bindsym $mod+Shift+8	move container to workspace $ws8
 bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
-#for_window [class="Blender"] move to workspace $ws6
-#for_window [class="Icedove"] move to workspace $ws9
-#for_window [class="Iceweasel"] move to workspace $ws2
-#for_window [title="GIMP Startup"] move workspace $ws5
-#for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
-#for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
-#for_window [window_role="tr-main"] move to workspace $ws8
-
-#bindsym $mod+Shift+Home		move container to workspace $ws1
-#bindsym $mod+End		workspace $ws10
-#bindsym $mod+Shift+End		move container to workspace $ws10
-#bindsym $mod+Prior		workspace prev
-#bindsym $mod+Shift+Prior	move container to workspace prev
-#bindsym $mod+Next		workspace next
-#bindsym $mod+Shift+Next		move container to workspace next
-#END
-
-#Media
-#bindsym $mod+plus		exec --no-startup-id pamixer -i 5
-#bindsym $mod+Shift+plus		exec --no-startup-id pamixer -i 15
-
-#bindsym $mod+minus 		exec --no-startup-id pamixer -d 5
-#bindsym $mod+Shift+minus	exec --no-startup-id pamixer -d 15
-
-#bindsym $mod+bracketleft 	exec --no-startup-id mocp -k -10
-#bindsym $mod+Shift+bracketleft 	exec --no-startup-id mocp -k -120
-
-#bindsym $mod+bracketright 	exec --no-startup-id mocp -k 10
-#bindsym $mod+Shift+bracketright exec --no-startup-id mocp -k 120
-
-#bindsym Print 			exec --no-startup-id scrot
-#bindsym Shift+Print 		exec --no-startup-id scrot -u
-#bindsym $mod+Print 		exec --no-startup-id $screencast
-#bindsym $mod+Shift+Print 	exec --no-startup-id killall ffmpeg
-
-#bindsym $mod+Scroll_Lock	exec --no-startup-id $audio
-
-#bindsym XF86Launch1		exec --no-startup-id scrot
-#bindsym Shift+XF86Launch1	exec --no-startup-id scrot -u
-#bindsym $mod+XF86Launch1	exec --no-startup-id $screencast
-#bindsym $mod+Shift+XF86Launch1	exec --no-startup-id killall ffmpeg
-
 bindsym XF86AudioPlay		exec --no-startup-id mocp -G
 bindsym XF86AudioPause		exec --no-startup-id mocp -G
 bindsym XF86AudioNext		exec --no-startup-id mocp -f
@@ -252,14 +176,6 @@ bindsym XF86AudioPrev		exec --no-startup-id mocp -r
 bindsym XF86AudioStop		exec --no-startup-id mocp -G
 
 #END
-
-#bindsym XF86Mail		exec $term -e mutt
-#bindsym $mod+XF86Mail		exec $mail
-#bindsym XF86MyComputer		exec
-#bindsym $mod+XF86MyComputer	exec
-#bindsym XF86HomePage		exec --no-startup-id $browser --new-window lukesmith.xyz
-#bindsym $mod+XF86HomePage	exec --no-startup-id $browser 
-#bindsym $mod+XF86WWW		exec --no-startup-id $browser
 
 bindsym XF86Calculator		exec $term -e qalc
 #______________________________dell latitude
@@ -281,11 +197,8 @@ bindsym $mod+Control+Left exec xrandr --output LVDS1 --rotate left
 bindsym $mod+Control+Right exec xrandr --output LVDS1 --rotate right
 
 bindsym $mod+Control+Up exec xrandr --output LVDS1 --rotate normal
-# Capture
-# scrot & gimp - root
-bindsym Print exec scrot -s -e 'mv $f ~/Pictures/output.png'
-# scrot & gimp - select window or rectangle
-bindsym Mod1+Print exec scrot -s -e 'mv $f ~/Pictures mirage ~/Pictures/$f'
+bindsym Print 		exec scrot -e 'mv $f ~/Pictures/output.png'
+bindsym $mod+Print 	exec scrot -s -e 'mv $f ~/Pictures/windows.png'
 
 # Layout workspace
 #i3-msg "workspace 1; append_layout /root/.config/i3/workspace-1.json"
@@ -293,5 +206,3 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f ~/Pictures mirage ~/Pictures/$f'
 # (Note that those lines will quickly become long, so typically you would store
 #  them in a script with proper indentation.)
 bindsym $mod+Home		 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
-
-

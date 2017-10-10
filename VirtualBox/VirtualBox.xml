@@ -9,10 +9,10 @@
   <Global>
     <ExtraData>
       <ExtraDataItem name="GUI/DetailsPageBoxes" value="general,system,preview,display,storage,audio,network,usb,sharedFolders,description"/>
-      <ExtraDataItem name="GUI/LastWindowPosition" value="914,29,442,729"/>
-      <ExtraDataItem name="GUI/SplitterSizes" value="146,292"/>
-      <ExtraDataItem name="GUI/UpdateCheckCount" value="2"/>
-      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2017-09-20, stable, 5.1.28"/>
+      <ExtraDataItem name="GUI/LastWindowPosition" value="916,31,438,725"/>
+      <ExtraDataItem name="GUI/SplitterSizes" value="145,289"/>
+      <ExtraDataItem name="GUI/UpdateCheckCount" value="3"/>
+      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2017-10-05, stable, 5.1.28"/>
     </ExtraData>
     <MachineRegistry/>
     <NetserviceRegistry>

@@ -1,0 +1,220 @@
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = false
+
+[colors]
+background 	= #000000
+foreground 	= #C5C8C6
+colour_1	= #707880
+colour_2	= #5F819D
+colour_3	= #CC6666
+
+[bar/default]
+monitor = ${env:MONITOR:LVDS1}
+top = true
+width = 100%
+height = 15
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground =  ${colors.foreground}
+
+line-size = 2
+
+padding-left = 0
+padding-right = 0
+
+/* khoang cach */
+module-margin-left = 1.5
+module-margin-right = 1.5
+
+font-0 = Hack:fontformat=truetype:size=9;1
+font-1 = Hack:fontformat=truetype:size=9;1
+font-2 = FontAwesome:fontformat=truetype:size=9;1
+
+modules-left = i3 
+modules-center = xwindow
+modules-right = volume battery wireless-network vpn memory temperature date
+
+tray-position = right
+tray-padding = 5
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = true
+tray-transparent = false
+tray-color = #1D1F21
+
+wm-restack = i3
+override-redirect = false
+
+[module/i3]
+type = internal/i3
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.colour_1}
+
+label-focused = %index%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.colour_1}
+label-focused-padding = 4
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-underline = ${colors.foreground}
+label-visible-padding = 3
+
+label-urgent = %index%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-underline = ${colors.colour_3}
+label-urgent-padding = 2
+
+[module/xwindow]
+type = internal/xwindow
+
+[module/date]
+type = internal/date
+interval = 5
+
+format = <label>
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.colour_1}
+
+label = %date%, %time%
+
+date = "%d/%m"
+date-alt = "%a %B %d"
+
+time = "%I:%M"
+time-alt = "%H:%M"
+
+[module/volume]
+type = internal/volume
+
+format-muted-background = ${colors.background}
+format-volume-background = ${colors.background}
+format-volume = <label-volume> 
+label-muted = 
+ramp-volume-2 =
+
+/* bar-volume-width = 15 */
+bar-volume-foreground = ${colors.foreground}
+bar-volume-gradient = true
+bar-volume-indicator= ~
+bar-volume-indicator-font = 1
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.colour_2}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 65
+
+format = <label>
+format-warn = <label-warn>
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.colour_3}
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = ⚡ Power
+label-open-background = ${colors.background}
+label-open-foreground = ${colors.foreground}
+label-close = ⚡
+label-close-background = ${colors.background}
+label-close-foreground = ${colors.foreground}
+label-separator = " "
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = Reboot
+menu-0-0-exec = shutdown -r now
+menu-0-1 = Power Off
+menu-0-1-exec = shutdown now
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[module/battery]
+type = internal/battery
+full-at = 99
+
+battery = BAT0
+adapter = AC
+poll-interval = 5
+
+time-format = %H:%M
+
+format-charging =   <label-charging>
+format-discharging =   <label-discharging>
+
+format-charging-foreground = ${colors.colour_1}
+format-discharging-foreground = ${colors.colour_1}
+format-full-foreground = ${colors.colour_1}
+
+label-charging = %percentage%
+label-discharging = %percentage%
+label-full = 
+
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
+label-full-foreground = ${colors.foreground}
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+interval = 3.0
+accumulate-stats = true
+format-connected =  <label-connected>
+format-connected-foreground = ${colors.colour_1}
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%  %local_ip%
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = (None)
+label-disconnected-foreground = ${colors.foreground}
+
+[module/vpn]
+type = internal/network
+interface = tun0
+
+interval = 5.0
+accumulate-stats = true
+format-connected = VPN: <label-connected>
+format-connected-foreground = ${colors.colour_1}
+format-disconnected = <label-disconnected>
+
+label-connected = 
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground}
+
+[module/memory]
+type = internal/memory
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+label = %gb_used%
