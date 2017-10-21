@@ -7,17 +7,18 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Monospace 9
+font = Monospace 10
 scrollback_lines = 10000
 search_wrap = true
 filter_unmatched_urls = true
 
+[colors]
 background = rgba(7, 5, 0, 0.8)
+foreground = #91820e
 
-highlight = #2758ba
+highlight = #2a1368
 
-# colors from color0 to color254 can be set
-# color0 = #3f3f3
+color0 = #91820e
 # color1 = #705050
 # color2 = #60b48a
 # color3 = #dfaf8f
@@ -35,7 +36,6 @@ highlight = #2758ba
 # color15 = #ffffff
 #; [hints]
 #font = Monospace 12
-#foreground = #dcdccc
 
 #background = #3f3f3f
 #active_foreground = #e68080

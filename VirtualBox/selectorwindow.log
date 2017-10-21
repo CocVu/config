@@ -1,15 +1,18 @@
 VirtualBox GUI VM Selector Window 5.1.28 r117968 linux.amd64 (Sep 14 2017 22:01:36) release log
-00:00:00.069405 Log opened 2017-10-04T10:57:26.794786000Z
-00:00:00.069406 Build Type: release
-00:00:00.069408 OS Product: Linux
-00:00:00.069408 OS Release: 4.13.3-1-ARCH
-00:00:00.069409 OS Version: #1 SMP PREEMPT Thu Sep 21 20:33:16 CEST 2017
-00:00:00.069425 DMI Product Name: Latitude E6230
-00:00:00.069430 DMI Product Version: 01
-00:00:00.069463 Host RAM: 3894MB (3.8GB) total, 3367MB (3.2GB) available
-00:00:00.069466 Executable: /usr/lib/virtualbox/VirtualBox
-00:00:00.069466 Process ID: 4982
-00:00:00.069467 Package type: LINUX_64BITS_GENERIC (OSE)
-00:00:00.069490 Qt version: 5.9.1
-00:00:00.075314 GUI: UIMediumEnumerator: Medium-enumeration started...
-00:00:00.163247 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 686x28 x 331x725
+00:00:01.371435 Log opened 2017-10-18T01:40:24.737566000Z
+00:00:01.371436 Build Type: release
+00:00:01.371438 OS Product: Linux
+00:00:01.371438 OS Release: 4.9.56-1-lts
+00:00:01.371439 OS Version: #1 SMP Thu Oct 12 22:34:15 CEST 2017
+00:00:01.371455 DMI Product Name: Latitude E6230
+00:00:01.371460 DMI Product Version: 01
+00:00:01.371494 Host RAM: 3830MB (3.7GB) total, 2404MB (2.3GB) available
+00:00:01.371497 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:01.371497 Process ID: 12666
+00:00:01.371498 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:01.371516 Qt version: 5.9.2
+00:00:01.483598 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:02.255892 Failed to open "/dev/vboxdrv", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:00:02.267577 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:02.270561 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 9x24 x 666x729
+00:03:12.734462 GUI: UIMediumEnumerator: Medium-enumeration finished!

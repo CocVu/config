@@ -1,5 +1,9 @@
-
 [Default Applications]
-application/pdf=zathura.desktop
+application/pdf=evince.desktop
 application/png=mirage.desktop
 application/jpg=mirage.desktop
+application/html=firefox.desktop
+application/http=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+text/plain=vim.desktop
