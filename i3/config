@@ -29,7 +29,7 @@ exec_always 			exec bash ~/.config/polybar/launch.sh
 
 
 bindsym $mod+Return 		exec $term
-bindsym $mod+Shift+Return	exec $term -e set -o vi
+bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
 
 bindsym $mod+Shift+space 	floating toggle
 #bindsym $mod+space		focus mode_toggle

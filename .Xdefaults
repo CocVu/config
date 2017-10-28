@@ -1,0 +1,85 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+URxvt*font:     xft:mono:medium:size=10
+xterm*faceName: xft:mono:medium:size=9.5
+URxvt.letterSpace: -1
+
+Xcursor.theme: Obsidian
+
+URxvt*scrollBar: false
+!URxvt*geometry: 120x70
+URxvt*depth: 32
+URxvt*jumpScroll: true
+URxvt*skipScroll: true
+URxvt*visualBell: false
+URxvt*buffered: true
+URxvt*transparent: false
+URxvt*fading: 10
+URxvt*fadeColor: grey
+URxvt*shading: 75
+!URxvt*font: xft:Terminus-12
+!URxvt*boldFont: xft:Terminus-12-bold
+URxvt.matcher.button:   2
+URxvt.perl-ext-common: matcher,clipboard
+URxvt.perl-lib: /usr/lib/urxvt/perl/matcher
+URxvt*intensityStyles: true
+URxvt*internalBorder: 0
+URxvt*externalBorder: 1
+URxvt*borderLess: false
+URxvt*termName: rxvt-unicode
+urxvt.colorBD:           #ffffff
+urxvt.colorIT:           #bbbbbb
+urxvt.colorUL:           #999999
+urxvt.underlineColor:    #999999
+
+!XTerm*Geometry: 100x60
+XTerm*background: Black
+XTerm*foreground: White
+XTerm*scrollBar: false
+XTerm*termName: xterm-256color
+
+*background:       #151515
+*foreground:       #ffffff
+!black
+*color0:           #111111
+*color8:           #505050
+!red
+*color1:           #b04020
+*color9:           #dd4010
+!green
+*color2:           #afd700
+*color10:          #daff30
+!yellow
+*color3:           #f7cf0a
+!*color11:          #fce70d
+*color11:          #ff9600
+!blue
+*color4:           #3060aa
+*color12:          #6099dd
+!magenta
+*color5:           #d6156c
+*color13:          #fe4365
+!cyan
+*color6:           #a0c2de
+*color14:          #c9dee8
+!white
+*color7:           #cacaca
+*color15:          #b0b0b0
+
+!For real transparency (composite):
+!urxvt*depth: 32
+!urxvt*background: rgba:0000/0000/0200/c800
+
+
+!For real transparency (composite):
+!urxvt*transparent: true
+!urxvt*shading: 30

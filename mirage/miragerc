@@ -1,6 +1,6 @@
 [window]
-w = 442
-h = 729
+w = 1366
+h = 768
 toolbar = True
 statusbar = True
 thumbpane = True
@@ -16,7 +16,7 @@ use_last_dir = True
 last_dir = /home/coc
 fixed_dir = /home/coc
 open_mode = 0
-last_mode = 0
+last_mode = 2
 listwrap_mode = 0
 slideshow_delay = 1
 slideshow_random = False
