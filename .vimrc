@@ -1,4 +1,3 @@
-" line `. last edit `` last jump `^ insertmod
 let filename=expand('%:r')
 let mapleader="\<Space>"
 nnoremap K i<CR><Esc>
@@ -10,28 +9,38 @@ nnoremap <Leader>q q
 nnoremap q :w <CR>
 inoremap <B-q> <Esc>:w <CR>
 nnoremap <Leader>\| :TableModeToggle<CR>
-noremap  <Leader>l :tabn<CR> 
-noremap  <Leader>h :tabp<CR>
+map  <Leader>l <c-w>l
+map  <Leader>h <c-w>h
+vnoremap < <gv " move block
+vnoremap > >gv " move block
 noremap  <Leader>o :tabnew<CR>
 noremap  <Leader>x :tabclose<CR>
 noremap  <Leader>v :call ToggleMouse()<CR>
+noremap  <Leader>e :wq<CR>
+noremap  <Leader>E :wqa!<CR>
 noremap  <Leader>y "+y
+noremap  <C-c> "+y
 map <Leader> <Plug>(easymotion-prefix)
 "set number 
 "set relativenumber 
 set nocompatible
 set encoding=utf-8
 set mouse+=a
+set nobackup
+set nowritebackup
+set noswapfile
 
 " +--------+
 " | PLUGIN |
 " +--------+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
+Plugin 'Valloric/YouCompleteMe' 	"auto complete
+Plugin 'python-mode/python-mode' 	" python
+Plugin 'derekwyatt/vim-scala' 		" scala
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-pathogen'
-Plugin 'python-mode/python-mode' 	" python warning and error
 Plugin 'tpope/vim-surround'		" 'Hello world!' cs'<q> <q>Hello world!</q> vS add 
 Plugin 'VundleVim/Vundle.vim'		"set Plugin
 Plugin 'Lokaltog/powerline' 		" power line mode
@@ -39,7 +48,6 @@ Plugin 'jiangmiao/auto-pairs'           "auto closing pair brak
 Plugin 'SirVer/ultisnips' 		"snippets
 Plugin 'honza/vim-snippets'
 Plugin 'jrozner/vim-antlr'              "antlr
-Plugin 'Valloric/YouCompleteMe' 	"auto complete
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'easymotion/vim-easymotion' 	"easy motion Leader Leader j or k
 Plugin 'scrooloose/nerdcommenter' 	"commnent Leader cc cu ma md
@@ -48,17 +56,16 @@ Plugin 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'} "|| && Leader |
 Plugin 'dim13/smyck.vim' 	 	" color
 Plugin 'nightsense/willy' 	 	" color for terminal
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
+"Plugin 'lervag/vimtex'
 call vundle#end()            
+
 filetype plugin indent on    
 call pathogen#infect()
 call pathogen#helptags()
+
 syntax enable
-
 colors smyck
-
-
 " +--------------+
 " | TOGGLE MOUSE |
 " +--------------+
@@ -117,27 +124,41 @@ let g:livepreview_previewer = 'evince'
 " let g:NERDCommentEmptyLines = 1
 " let g:NERDTrimTrailingWhitespace = 1
 "
-" " +--------+
-" " | BUFFER |
-" " +--------+
-"au BufNewFile,BufRead *.py,*.c,*.cpp,*.scala,*.java,*.java
-"\ set tabstop=4 |
-"\ set softtabstop=4 |
-"\ set shiftwidth=4 |
-"\ set textwidth=79 |
-"\ set expandtab |
-"\ set autoindent |
-"\ set fileformat=unix
-"au BufNewFile,BufRead *.js, *.html, *.css
-"\ set tabstop=2 |
-"\ set softtabstop=2 |
-"\ set shiftwidth=2
+" +--------+
+" | buffer |
+" +--------+
+au BufNewFile,BufRead *.py,*.c,*.cpp,*.scala,*.java,*.java
+			\ set tabstop=4 |
+			\ set softtabstop=4 |
+			\ set shiftwidth=4 |
+			\ set textwidth=79 |
+			\ set expandtab |
+			\ set autoindent |
+			\ set fileformat=unix
+au BufNewFile,BufRead *.js, *.html, *.css
+			\ set tabstop=2 |
+			\ set softtabstop=2 |
+			\ set shiftwidth=2
 
 " +---------+
-" | COMPILE |
+" | PYTHON  |
 " +---------+
+"Check code on every save (if file has been modified)  *'g:pymode_lint_on_write'*
+"let g:pymode_lint_on_write = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+let g:pymode_indent = 1
+let g:pymode_quickfix_minheight = 3
+let g:pymode_quickfix_maxheight = 6
+let g:pymode_warnings = 0
+let g:pymode_folding = 0
+autocmd BufEnter {window_name_list} :wincmd L
+autocmd BufEnter __run__,__doc__ :wincmd L
+
+
+
 au Filetype python  nnoremap <F5> :w <CR> :!clear && python  % <CR>
 au Filetype python  inoremap <F5> <Esc>:w <CR> :!clear && python  % <CR>
+
 au Filetype c,cpp  nnoremap <F5>  :w <CR> :call CompileCpp() <CR>
 au Filetype c,cpp  inoremap <F5>  <Esc>:w <CR> :call CompileCpp() <CR>
 au Filetype c,cpp  nnoremap <F10>  :w <CR> :!clear && g++  % -o %:r && ./%:r <CR>
@@ -152,6 +173,7 @@ au Filetype txt  nnoremap <F5> :e! <CR>
 au Filetype txt  inoremap <F5> <Esc> :e! <CR>
 au Filetype scala  nnoremap <F5>  :!clear && scalac %  && scala  %:r <CR>
 au Filetype sh  nnoremap <F5>  :!clear && bash %  <CR>
+
 function! CompileCpp()
 	if !empty(glob("input"))
 		:!clear && g++  % -o %:r && ./%:r<input 
@@ -170,26 +192,13 @@ endfunction
 " +-------------+
 " | EASY MOTION |
 " +-------------+
-nmap <leader>g :YcmCompleter GoTo<CR>
-nmap <leader>d :YcmCompleter GoToDefinition<CR>
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-nmap s <Plug>(easymotion-overwin-f2)
+"nmap <leader>g :YcmCompleter GoTo<CR>
+"nmap <leader>d :YcmCompleter GoToDefinition<CR>
+"map  <Leader>f <Plug>(easymotion-bd-f)
+"nmap <Leader>f <Plug>(easymotion-overwin-f)
+"nmap s <Plug>(easymotion-overwin-f2)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 map  <Leader>f <Plug>(easymotion-bd-w)
 nmap <Leader>f <Plug>(easymotion-overwin-w)
 
-function! s:ExecuteInShell(command)
-	let command = join(map(split(a:command), 'expand(v:val)'))
-	let winnr = bufwinnr('^' . command . '$')
-	silent! execute  winnr < 0 ? 'botright vnew ' . fnameescape(command) : winnr . 'wincmd w'
-	setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap number
-	silent! execute 'silent %!'. command
-	silent! execute 'resize '
-	silent! redraw
-	silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
-	silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>'
-	echo 'Shell command ' . command . ' executed.'
-endfunction
-command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)]
