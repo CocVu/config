@@ -34,7 +34,8 @@ bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
 bindsym $mod+Shift+space 	floating toggle
 #bindsym $mod+space		focus mode_toggle
 
-bindsym $mod+Escape		exec --no-startup-id xset -display :0.0 dpms force off
+#bindsym $mod+Escape		exec --no-startup-id xset -display :0.0 dpms force off
+bindsym $mod+Escape		exec i3-msg restart
 bindsym $mod+Shift+Escape 	exec i3-msg exit
 
 bindsym $mod+Shift+BackSpace	exec reboot
@@ -44,8 +45,8 @@ bindsym $mod+Tab		workspace back_and_forth
 
 bindsym $mod+q		kill
 
-bindsym $mod+w		exec qutebrowser
-bindsym $mod+Shift+w	exec --no-startup-id $browser
+bindsym $mod+w			exec --no-startup-id $browser
+bindsym $mod+Shift+w		exec qutebrowser
 
 bindsym $mod+e		exec evince
 #bindsym $mod+Shift+e	exec $mail
@@ -193,13 +194,16 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # Touchpad controls
 # Rotate
-bindsym $mod+Control+Left exec xrandr --output LVDS1 --rotate left
+bindsym $mod+Control+Left exec xrandr --output LVDS1 --rotate left; exec i3-msg restart
 
-bindsym $mod+Control+Right exec xrandr --output LVDS1 --rotate right
+bindsym $mod+Control+Right exec xrandr --output LVDS1 --rotate right; exec i3-msg restart
 
-bindsym $mod+Control+Up exec xrandr --output LVDS1 --rotate normal
-bindsym Print 		exec scrot -e 'mv $f ~/Pictures/output.png'
-bindsym $mod+Print 	exec scrot -s -e 'mv $f ~/Pictures/windows.png'
+bindsym $mod+Control+Up exec xrandr --output LVDS1 --rotate normal; exec i3-msg restart
+
+bindsym $mod+Control+Down exec xrandr --output LVDS1 --rotate inverted; exec i3-msg restart
+
+bindsym Print 		exec scrot -e 'cp $f ~/Pictures/output.png && mv $f ~/Pictures'
+bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/windows'
 
 # Layout workspace
 #i3-msg "workspace 1; append_layout /root/.config/i3/workspace-1.json"
