@@ -1,0 +1,172 @@
+[02/01/18, 18:59:36:628] info: ╔══════════════════════════════════════════════════════════════════════════════╗
+[02/01/18, 18:59:36:629] info: ║      Slack 3.0.5, linux 4.14.14-1-ARCH on x64 at 02/01/18, 18:59:36:623      ║
+[02/01/18, 18:59:36:629] info: ╚══════════════════════════════════════════════════════════════════════════════╝
+[02/01/18, 18:59:36:808] info: Initializing local storage instance at path: /home/coc/.config/Slack/local-settings.json
+[02/01/18, 18:59:37:212] error: Calls failed to load, bailing
+[02/01/18, 18:59:37:216] info: updateSuspendResume: true
+[02/01/18, 18:59:37:217] warn: updateSpellcheckerLanguage: Tried to update language, but spellchecker not initialized
+[02/01/18, 18:59:41:876] error: 2018/2/1 18:59:41.874 logging error: {"subtype":"api_call_error","message":"{\"ok\":false,\"error\":\"not_allowed\"}","stack":"Error\n    at Object.n [as logError] (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.b3d53fb8dd84706b8fab.min.js:1:68345)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:130973)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:126172)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:127767)\n    at XMLHttpRequest.m.onreadystatechange (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:129465)"}
+[02/01/18, 18:59:41:882] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "loaded",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:42:798] info: Store: SELECT_CHANNEL C924QEXGA
+[02/01/18, 18:59:42:799] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:42:800] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[02/01/18, 18:59:42:801] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T924QER4J",
+  "theme": {
+    "active_item": "#4C9689",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#38978D",
+    "badge": "#EB4D5C",
+    "column_bg": "#4D394B",
+    "hover_item": "#3E313C",
+    "menu_bg": "#3E313C",
+    "text_color": "#FFFFFF"
+  }
+}
+[02/01/18, 18:59:42:874] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:287] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": false,
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:288] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:290] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "webapp-loaded",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:325] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T924QER4J",
+  "token": "xoxs-⋯"
+}
+[02/01/18, 18:59:48:300] info: Couldn't get hint text from messages in channel: Failed to fetch recent messages
+[02/01/18, 18:59:55:389] info: Couldn't get hint text from messages in channel: Failed to fetch recent messages
+[02/01/18, 19:00:29:120] info: Store: SHOW_LOGIN_DIALOG
+[02/01/18, 19:00:29:126] info: Unloading spellchecker
+[02/01/18, 19:01:48:743] info: Unloading spellchecker
+[02/01/18, 19:01:54:915] info: Store: OPEN_CONTEXT_MENU
+{
+  "id": 4,
+  "params": "[REDACTED]"
+}
+[02/01/18, 19:01:57:138] info: Unloading spellchecker
+[02/01/18, 19:01:59:656] info: Unloading spellchecker
+[02/01/18, 19:01:59:656] info: Store: UPDATE_SETTINGS
+{
+  "hasRunFromTray": true
+}
+[02/01/18, 19:01:59:657] info: Store: SHOW_TRAY_BALLOON
+{
+  "content": "Slack’s set to stay running in the notification area. To change this, visit Preferences > Linux App.",
+  "title": "Why didn’t Slack quit?"
+}
+[02/01/18, 19:01:59:710] info: Store: SET_FULL_SCREEN
+[02/01/18, 20:20:11:129] info: Store: FOREGROUND_APP
+[02/01/18, 20:20:41:094] info: Unloading spellchecker
+[02/01/18, 20:32:54:962] info: Unloading spellchecker
+[02/01/18, 20:54:49:969] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:49:969] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:49:981] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "N9jmhNhRqr5WwGN",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493289.000404&team=T924QER4J",
+  "msg": "1517493289.000404",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:54:54:386] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:54:386] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:54:390] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "7LzrhziNjqMGXY4",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493293.000690&team=T924QER4J",
+  "msg": "1517493293.000690",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:54:59:757] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:59:757] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:54:59:760] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "JqAgspsLZvP90Z7",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493299.000311&team=T924QER4J",
+  "msg": "1517493299.000311",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:55:15:552] info: Store: FOREGROUND_APP
+[02/01/18, 20:56:13:193] info: Unloading spellchecker
+[02/01/18, 20:59:12:167] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:59:12:167] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:59:12:182] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "OyknI2tryPZmZ5q",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493551.000428&team=T924QER4J",
+  "msg": "1517493551.000428",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:59:36:638] info: Unloading spellchecker
+[02/01/18, 20:59:39:850] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:59:39:850] warn: Unable to read quiet hours setting: windows-quiet-hours works only on Windows
+[02/01/18, 20:59:39:862] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "PZloh3ujq6wAypW",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493579.000204&team=T924QER4J",
+  "msg": "1517493579.000204",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}

@@ -3,7 +3,9 @@ gaps inner 5
 gaps outer 5
 
 #Basic settings
-set $mod Mod4
+# set $mod Mod4
+set $mod Mod1
+set $mod4 Mod4
 floating_modifier $mod
 set $term termite
 #set $term urxvt
@@ -14,18 +16,21 @@ set $audio ffmpeg -f alsa -i default -c:a flac -y output.flac
 font pango:LiberationMono Sans Mono, Icons 11
 #set $mail icedove
 exec --no-startup-id nm-applet
-exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-exec_always 			exec bash ~/keyboard.sh 
+#exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-# bar {
-#         font pango:Inconsolata 8
-#         position top
-#         tray_output none
-#         status_command i3status
-# }
+# exec_always 			exec bash ~/keyboard.sh 
+exec_always --no-startup-id  bash /home/coc/.config/startup.sh
+#exec_always 			exec bash /home/coc/.config/startup.sh
 
-exec_always 			exec bash ~/.config/polybar/launch.sh
+bar {
+        font pango:Inconsolata 8
+        position top
+        tray_output none
+        status_command i3status
+}
+
+exec_always 			exec bash ~/.config/startup.sh
 
 
 bindsym $mod+Return 		exec $term
@@ -48,7 +53,8 @@ bindsym $mod+q		kill
 bindsym $mod+w			exec --no-startup-id $browser
 bindsym $mod+Shift+w		exec qutebrowser
 
-bindsym $mod+e		exec evince
+bindsym $mod+e		exec emacs
+bindsym $mod+p		exec evince
 #bindsym $mod+Shift+e	exec $mail
 
 bindsym $mod+r 		exec $term -e ranger
@@ -69,8 +75,8 @@ bindsym $mod+a		exec $term -e qalc
 bindsym $mod+s		gaps inner current plus 5
 bindsym $mod+Shift+s	gaps inner current minus 5
 
-# bindsym $mod+d		exec dmenu_run
-bindsym $mod+d		exec rofi -show run
+bindsym $mod+d		exec dmenu_run
+# bindsym $mod+d		exec rofi -show run
 
 #bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
 
@@ -137,16 +143,16 @@ bindsym $mod+Shift+Right move right
 
 #Workspaces
 
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 # switch to workspace
 bindsym $mod+1		workspace $ws1
 bindsym $mod+2		workspace $ws2
@@ -185,22 +191,34 @@ bindsym XF86Calculator		exec $term -e qalc
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+
+bindsym $mod4+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod4+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod4+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym $mod4+Up exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym $mod4+Down exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
 # Rotate
 bindsym $mod+Control+Left exec xrandr --output LVDS1 --rotate left; exec i3-msg restart
+bindsym $mod+Control+h exec xrandr --output LVDS1 --rotate left; exec i3-msg restart
 
 bindsym $mod+Control+Right exec xrandr --output LVDS1 --rotate right; exec i3-msg restart
+bindsym $mod+Control+l exec xrandr --output LVDS1 --rotate right; exec i3-msg restart
 
 bindsym $mod+Control+Up exec xrandr --output LVDS1 --rotate normal; exec i3-msg restart
+bindsym $mod+Control+k exec xrandr --output LVDS1 --rotate normal; exec i3-msg restart
 
 bindsym $mod+Control+Down exec xrandr --output LVDS1 --rotate inverted; exec i3-msg restart
+bindsym $mod+Control+j exec xrandr --output LVDS1 --rotate inverted; exec i3-msg restart
 
 bindsym Print 		exec scrot -e 'cp $f ~/Pictures/output.png && mv $f ~/Pictures'
 bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/windows'

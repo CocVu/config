@@ -1,0 +1,176 @@
+[02/01/18, 18:58:37:528] info: ╔══════════════════════════════════════════════════════════════════════════════╗
+[02/01/18, 18:58:37:530] info: ║      Slack 3.0.5, linux 4.14.14-1-ARCH on x64 at 02/01/18, 18:58:37:522      ║
+[02/01/18, 18:58:37:530] info: ╚══════════════════════════════════════════════════════════════════════════════╝
+[02/01/18, 18:58:37:798] info: Initializing local storage instance at path: /home/coc/.config/Slack/local-settings.json
+[02/01/18, 18:59:33:677] info: Store: ADD_NEW_TEAM
+{
+  "id": "U929DABBP",
+  "name": "[REDACTED]",
+  "team_id": "T924QER4J",
+  "team_name": "[REDACTED]",
+  "team_url": "[REDACTED]"
+}
+[02/01/18, 18:59:33:690] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "unloaded",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:33:718] info: Store: FOREGROUND_APP
+[02/01/18, 18:59:33:719] info: Store: MAIN_WINDOW_SHOWN
+[02/01/18, 18:59:34:723] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    12,
+    31
+  ],
+  "size": [
+    1342,
+    725
+  ]
+}
+[02/01/18, 18:59:41:841] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "loaded",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:42:299] info: Store: SELECT_CHANNEL C924QEXGA
+[02/01/18, 18:59:42:305] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:42:309] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[02/01/18, 18:59:42:352] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T924QER4J",
+  "theme": {
+    "active_item": "#4C9689",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#38978D",
+    "badge": "#EB4D5C",
+    "column_bg": "#4D394B",
+    "hover_item": "#3E313C",
+    "menu_bg": "#3E313C",
+    "text_color": "#FFFFFF"
+  }
+}
+[02/01/18, 18:59:42:874] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:068] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": false,
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:173] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:208] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "webapp-loaded",
+  "teamId": "T924QER4J"
+}
+[02/01/18, 18:59:43:297] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T924QER4J",
+  "token": "xoxs-⋯"
+}
+[02/01/18, 19:00:29:106] info: Store: SHOW_LOGIN_DIALOG
+[02/01/18, 19:01:54:915] info: Store: OPEN_CONTEXT_MENU
+{
+  "id": 4,
+  "params": "[REDACTED]"
+}
+[02/01/18, 19:01:59:648] info: Store: UPDATE_SETTINGS
+{
+  "hasRunFromTray": true
+}
+[02/01/18, 19:01:59:652] info: Store: SHOW_TRAY_BALLOON
+{
+  "content": "Slack’s set to stay running in the notification area. To change this, visit Preferences > Linux App.",
+  "title": "Why didn’t Slack quit?"
+}
+[02/01/18, 19:01:59:710] info: Store: SET_FULL_SCREEN
+[02/01/18, 20:20:11:129] info: Store: FOREGROUND_APP
+[02/01/18, 20:54:49:974] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "N9jmhNhRqr5WwGN",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493289.000404&team=T924QER4J",
+  "msg": "1517493289.000404",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:54:54:390] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "7LzrhziNjqMGXY4",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493293.000690&team=T924QER4J",
+  "msg": "1517493293.000690",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:54:59:760] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "JqAgspsLZvP90Z7",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493299.000311&team=T924QER4J",
+  "msg": "1517493299.000311",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:55:15:551] info: Store: FOREGROUND_APP
+[02/01/18, 20:59:12:178] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "OyknI2tryPZmZ5q",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493551.000428&team=T924QER4J",
+  "msg": "1517493551.000428",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}
+[02/01/18, 20:59:39:861] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T924QER4J-U936LV1U7-g11e87d45405-512",
+  "channel": "C924QEXGA",
+  "content": "[REDACTED]",
+  "id": "PZloh3ujq6wAypW",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=C924QEXGA&message=1517493579.000204&team=T924QER4J",
+  "msg": "1517493579.000204",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T924QER4J",
+  "title": "[REDACTED]"
+}

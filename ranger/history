@@ -1,0 +1,7 @@
+open_with mi
+search 965
+open_with libinput-debug-eventsq
+open_with vlc
+open_with 0
+delete
+open_with firefox

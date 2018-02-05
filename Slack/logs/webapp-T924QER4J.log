@@ -1,0 +1,129 @@
+info: ╔══════════════════════════════════════════════════════════════════════════════╗
+info: ║      Slack 3.0.5, linux 4.14.14-1-ARCH on x64 at 02/01/18, 18:59:33:704      ║
+info: ╚══════════════════════════════════════════════════════════════════════════════╝
+error: Calls failed to load, bailing
+info: Feb-1 18:59:40.414 [BOOT] booted! pri:0 version:1517456981 start_ms:1517486377747 (2666ms ago)
+info: Feb-1 18:59:40.414 [BOOT] Starting incremental boot (early)
+info: Feb-1 18:59:41.184 [T924QER4J] SOCKET-MANAGER:  Changing from never_connected to prov_connect
+info: Feb-1 18:59:41.185 [T924QER4J] SOCKET-MANAGER:  will stay in prov_connect state for up to 10000 ms
+info: Feb-1 18:59:41.186 [T924QER4J] SOCKET-MANAGER:  Changing from prov_connect to prov_connecting
+info: Feb-1 18:59:41.186 [T924QER4J] SOCKET-MANAGER:  will stay in prov_connecting state for up to 20000 ms
+info: Feb-1 18:59:41.218 [FOCUS-EVENT] Window blurred
+error: 2018/2/1 18:59:41.874 logging error: {"subtype":"api_call_error","message":"{\"ok\":false,\"error\":\"not_allowed\"}","stack":"Error\n    at Object.n [as logError] (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.b3d53fb8dd84706b8fab.min.js:1:68345)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:130973)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:126172)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:127767)\n    at XMLHttpRequest.m.onreadystatechange (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.022d27b4778643594271.min.js:1:129465)"}
+warn: Feb-1 18:59:41.876 args/data logging skipped, run with ?log_api_failures=1 to enable full logging
+info: Feb-1 18:59:42.302 [BOOT] Finalizing incremental boot
+info: Feb-1 18:59:42.662 [FLANNEL] received a user_counts_request call while we are not connected; deferring
+info: Feb-1 18:59:42.663 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (3) timestamps added
+info: Feb-1 18:59:42.665 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 0
+info: Feb-1 18:59:42.765 [HISTORY-FETCH] Fetching history for message pane: C924QEXGA
+info: Feb-1 18:59:42.772 [CHECK-UNREADS] unreadLineVisible updated: false -> true
+info: Feb-1 18:59:42.774 [MESSAGE-LIST] componentWillReceiveProps isLoading: false isLoadingOlder: false timestamps: 1
+info: Feb-1 18:59:42.818 [MESSAGE-LIST] componentWillReceiveProps isLoading: true isLoadingOlder: true timestamps: 1
+info: Feb-1 18:59:42.822 [CHECK-UNREADS] unreadLineVisible updated: true -> false
+info: Feb-1 18:59:42.976 [T924QER4J] SOCKET-MANAGER:  Changing from prov_connecting to prov_connected
+info: Feb-1 18:59:42.976 [T924QER4J] SOCKET-MANAGER:  will stay in prov_connected state for up to 60000 ms
+info: Feb-1 18:59:42.978 [FLANNEL] connected! Continuing deferred user_counts_request call
+info: Feb-1 18:59:42.981 [INFO] Got start data from Socket Manager; hydrating it
+warn: Feb-1 18:59:43.380 activity is not scalar! it needs to be handled by upsertTeam specifically to test if it has changed! object
+info: Feb-1 18:59:43.590 [BOOT] Completed incremental boot
+info: Feb-1 18:59:43.172 [BOOT] _maybeFinalizeOrOpenConnectionToMS will finalize SocketManager
+info: Feb-1 18:59:43.172 [T924QER4J] SOCKET-MANAGER:  Changing from prov_connected to prov_finalize
+info: Feb-1 18:59:43.172 [T924QER4J] SOCKET-MANAGER:  will stay in prov_finalize state for up to 10000 ms
+info: Feb-1 18:59:43.173 [T924QER4J] SOCKET-MANAGER:  Changing from prov_finalize to prov_finalizing
+info: Feb-1 18:59:43.173 [T924QER4J] SOCKET-MANAGER:  will stay in prov_finalizing state for up to 10000 ms
+info: Feb-1 18:59:43.174 [T924QER4J] SOCKET-MANAGER:  Changing from prov_finalizing to connected
+info: Feb-1 18:59:43.174 [T924QER4J] SOCKET-MANAGER:  will stay in connected state for up to Infinity ms
+info: Feb-1 18:59:43.174 [BOOT] _maybeFinalizeOrOpenConnectionToMS did finalize SocketManager
+info: Feb-1 18:59:43.175 [BOOT] Finished first boot 2003 ms after DOM ready
+info: Feb-1 18:59:43.294 [CHECK-UNREADS] Checking unreads after fully booted
+info: Feb-1 18:59:43.295 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 18:59:43.779 [MESSAGE-LIST] componentWillReceiveProps isLoading: false isLoadingOlder: false timestamps: 1
+info: Feb-1 18:59:43.879 [CHECK-UNREADS] unreadLineVisible updated: false -> true
+info: Feb-1 18:59:44.239 [CHECK-UNREADS] Checking unreads after unread line became visible
+info: Feb-1 18:59:44.240 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 18:59:44.401 [UNREAD-COUNTS] Completed users.counts processing
+info: Feb-1 18:59:57.353 [FOCUS-EVENT] Window focused
+info: Feb-1 18:59:57.371 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 18:59:57.372 [CHECK-UNREADS] Marking C924QEXGA because unread line is visible
+info: Feb-1 18:59:57.375 [UNREAD-COUNTS] Counting unreads in C924QEXGA because last_read changed to 1517486381.000000
+info: Feb-1 19:00:29.125 [FOCUS-EVENT] Window blurred
+info: Feb-1 19:01:48.461 [FOCUS-EVENT] Window focused
+info: Feb-1 19:01:48.476 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 19:01:48.477 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 19:01:48.741 [FOCUS-EVENT] Window blurred
+info: Feb-1 19:01:57.129 [FOCUS-EVENT] Window focused
+info: Feb-1 19:01:57.137 [FOCUS-EVENT] Window blurred
+info: Feb-1 19:01:57.138 [FOCUS-EVENT] Window focused
+info: Feb-1 19:01:57.152 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 19:01:57.152 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 19:01:57.152 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 19:01:57.152 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 19:01:59.655 [FOCUS-EVENT] Window blurred
+info: Feb-1 20:20:11.144 [FOCUS-EVENT] Window focused
+info: Feb-1 20:20:11.173 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 20:20:11.174 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 20:20:41.890 [FOCUS-EVENT] Window blurred
+info: Feb-1 20:32:53.637 [FOCUS-EVENT] Window focused
+info: Feb-1 20:32:53.649 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 20:32:53.649 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 20:32:54.492 [ACTION:CLIENT-UI] Mark active channel read
+info: Feb-1 20:32:54.962 [FOCUS-EVENT] Window blurred
+info: Feb-1 20:54:49.952 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:54:49.953 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 1
+info: Feb-1 20:54:49.954 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:54:49.955 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 20:54:54.382 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:54:54.382 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 2
+info: Feb-1 20:54:54.383 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:54:54.384 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 20:54:59.753 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:54:59.754 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 3
+info: Feb-1 20:54:59.755 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:54:59.755 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 20:55:15.569 [FOCUS-EVENT] Window focused
+info: Feb-1 20:55:15.665 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 20:55:15.665 [CHECK-UNREADS] Marking C924QEXGA because unread line is visible
+info: Feb-1 20:55:15.668 [UNREAD-COUNTS] Counting unreads in C924QEXGA because last_read changed to 1517493299.000311
+info: Feb-1 20:55:15.668 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 0
+info: Feb-1 20:56:00.136 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:56:00.136 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:56:00.136 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 20:56:00.411 [UNREAD-COUNTS] Counting unreads in C924QEXGA because message removed
+info: Feb-1 20:56:00.411 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:56:00.411 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:56:00.412 [CHECK-UNREADS] Marking C924QEXGA because unread line is visible
+info: Feb-1 20:56:00.414 [UNREAD-COUNTS] Counting unreads in C924QEXGA because last_read changed to 1517493360.000167
+info: Feb-1 20:56:04.910 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:56:04.910 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:56:04.910 [CHECK-UNREADS] Not marking C924QEXGA because last_read >= latest && channel is read
+info: Feb-1 20:56:04.373 [UNREAD-COUNTS] Counting unreads in C924QEXGA because message removed
+info: Feb-1 20:56:04.373 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:56:04.374 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:56:04.374 [CHECK-UNREADS] Marking C924QEXGA because unread line is visible
+info: Feb-1 20:56:04.376 [UNREAD-COUNTS] Counting unreads in C924QEXGA because last_read changed to 1517493364.000115
+info: Feb-1 20:56:08.684 [ACTION:CLIENT-UI] Mark active channel read
+info: Feb-1 20:56:08.890 [ACTION:CLIENT-UI] Mark active channel read
+info: Feb-1 20:56:09.180 [ACTION:CLIENT-UI] Mark active channel read
+info: Feb-1 20:56:09.322 [ACTION:CLIENT-UI] Mark active channel read
+info: Feb-1 20:56:13.192 [FOCUS-EVENT] Window blurred
+info: Feb-1 20:59:12.127 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:59:12.127 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 1
+info: Feb-1 20:59:12.129 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:59:12.129 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 20:59:18.520 [FOCUS-EVENT] Window focused
+info: Feb-1 20:59:18.540 [CHECK-UNREADS] Checking unreads after window became focused
+info: Feb-1 20:59:18.541 [CHECK-UNREADS] Marking C924QEXGA because unread line is visible
+info: Feb-1 20:59:18.543 [UNREAD-COUNTS] Counting unreads in C924QEXGA because last_read changed to 1517493551.000428
+info: Feb-1 20:59:18.543 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 0
+info: Feb-1 20:59:36.636 [FOCUS-EVENT] Window blurred
+info: Feb-1 20:59:39.846 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 20:59:39.846 [UNREAD-COUNTS] Updated unread_cnt for C924QEXGA: 1
+info: Feb-1 20:59:39.847 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 20:59:39.847 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 22:18:45.773 [INFO] U92DCPUN9 joined the team
+info: Feb-1 22:18:45.804 [INFO] U92DCPUN9 joined channel C924QEXGA
+info: Feb-1 22:18:45.817 [UNREAD-COUNTS] Counting unreads in C924QEXGA because (1) timestamps added
+info: Feb-1 22:18:45.817 [UNREAD-COUNTS] Checking unreads in C924QEXGA after a new message
+info: Feb-1 22:18:45.817 [CHECK-UNREADS] Not marking C924QEXGA because attention not on chat (window_not_focused)
+info: Feb-1 22:18:45.859 [INFO] U92DCPUN9 joined channel C91HZ734H
+warn: Feb-1 22:18:48.749 we already have an im for this user: U92DCPUN9
