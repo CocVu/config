@@ -11,16 +11,14 @@
      helm
      markdown
      pdf-tools
-     ;; better-defaults
      emacs-lisp
      c-c++
      auto-completion
-     ;; git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     git
+     shell
+     org
+     markdown
+     ;; better-defaults
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
@@ -96,36 +94,53 @@
    dotspacemacs-whitespace-cleanup nil
    ))
 
-(setq-default dotspacemacs-configuration-layers
+(setq-default dotspacemacs-configuration-layers 
               '((c-c++ :variables
-                       c-c++-default-mode-for-headers 'c++-mode)))
+                       c-c++-enable-clang-support t
+                       c-c++-default-mode-for-headers 'c++-mode
+                       )))
 
 (setq-default dotspacemacs-configuration-layers
-              '((c-c++ :variables c-c++-enable-clang-support t)))
+              '((auto-completion :variables
+                       auto-completion-return-key-behavior 'complete
+                       auto-completion-tab-key-behavior 'cycle
+                       auto-completion-complete-with-key-sequence nil
+                       auto-completion-complete-with-key-sequence-delay 0.1
+                       auto-completion-enable-help-tooltip t)))
 
-(setq-default dotspacemacs-configuration-layers '((auto-completion :variables
-          auto-completion-return-key-behavior 'complete
-          auto-completion-tab-key-behavior 'cycle
-          auto-completion-complete-with-key-sequence nil
-          auto-completion-complete-with-key-sequence-delay 0.1
-          auto-completion-enable-help-tooltip t
-          )))
-
+(setq-default dotspacemacs-configuration-layers
+              '((shell :variables
+                       shell-default-position 'bottom
+                       shell-default-height 30
+                       shell-default-shell 'eshell
+                       shell-default-term-shell "/bin/bash"
+                       shell-enable-smart-eshell t
+                       shell-protect-eshell-prompt nil
+                       )))
 
 (setq yas-snippet-dirs '("~/.emacs.d/private/snippets"))
 (defun dotspacemacs/user-init ()
+  (setq-default git-magit-status-fullscreen t)
+  (setq-default git-enable-magit-svn-plugin t)
   )
 
 (defun dotspacemacs/user-config ()
-  (c-c++ :variables c-c++-enable-clang-support t)
   (c++-mode (helm-make-build-dir . "build/"))
+  (global-git-commit-mode t)
   (desktop-save-mode)
   (desktop-read)
-
  )
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-quickhelp pos-tip yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic ac-cake pdf-tools tablist mmm-mode markdown-toc markdown-mode helm-company helm-c-yasnippet gh-md fuzzy disaster csv-mode company-statistics company-c-headers company cmake-mode clang-format auto-yasnippet yasnippet ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help smeargle orgit magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit ghub with-editor company-quickhelp pos-tip yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic ac-cake pdf-tools tablist mmm-mode markdown-toc markdown-mode helm-company helm-c-yasnippet gh-md fuzzy disaster csv-mode company-statistics company-c-headers company cmake-mode clang-format auto-yasnippet yasnippet ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
