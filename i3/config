@@ -3,7 +3,8 @@ gaps inner 5
 gaps outer 5
 
 #Basic settings
-set $mod Mod4
+set $mod Mod1
+set $mod4 Mod4
 floating_modifier $mod
 set $term termite
 #set $term urxvt
@@ -14,16 +15,15 @@ set $audio ffmpeg -f alsa -i default -c:a flac -y output.flac
 font pango:LiberationMono Sans Mono, Icons 11
 #set $mail icedove
 exec --no-startup-id nm-applet
-exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
+#exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-exec_always 			exec bash ~/keyboard.sh 
 
-# bar {
-#         font pango:Inconsolata 8
-#         position top
-#         tray_output none
-#         status_command i3status
-# }
+ bar {
+	 font pango:Inconsolata 8
+	 position top
+	 tray_output none
+	 status_command i3status
+ }
 
 exec_always 			exec bash ~/.config/polybar/launch.sh
 
@@ -43,7 +43,7 @@ bindsym $mod+Shift+BackSpace	exec reboot
 bindsym $mod+Tab		workspace back_and_forth
 
 
-bindsym $mod+q		kill
+bindsym $mod+q			kill
 
 bindsym $mod+w			exec --no-startup-id $browser
 bindsym $mod+Shift+w		exec qutebrowser
@@ -137,14 +137,14 @@ bindsym $mod+Shift+Right move right
 
 #Workspaces
 
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8: "
+set $ws8 "8"
 set $ws9 "9: "
 set $ws10 "10: "
 # switch to workspace
@@ -185,8 +185,11 @@ bindsym XF86Calculator		exec $term -e qalc
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod4+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod4+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod4+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -210,4 +213,4 @@ bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/win
 # In your i3 configuration file, you can autostart i3-msg like this:
 # (Note that those lines will quickly become long, so typically you would store
 #  them in a script with proper indentation.)
-bindsym $mod+Home		 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+#bindsym $mod+Home		 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
