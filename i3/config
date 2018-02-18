@@ -17,7 +17,6 @@ font pango:LiberationMono Sans Mono, Icons 11
 exec --no-startup-id nm-applet
 #exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
-
  bar {
 	 font pango:Inconsolata 8
 	 position top
@@ -25,7 +24,8 @@ exec --no-startup-id nm-applet
 	 status_command i3status
  }
 
-exec_always 			exec bash ~/.config/polybar/launch.sh
+# exec_always 			exec bash ~/.config/polybar/launch.sh
+exec_always 			exec xmodmap ~/.config/.Xmodmap
 
 
 bindsym $mod+Return 		exec $term
@@ -48,7 +48,8 @@ bindsym $mod+q			kill
 bindsym $mod+w			exec --no-startup-id $browser
 bindsym $mod+Shift+w		exec qutebrowser
 
-bindsym $mod+e		exec evince
+bindsym $mod+p			exec evince
+bindsym $mod+e			exec emacs
 #bindsym $mod+Shift+e	exec $mail
 
 bindsym $mod+r 		exec $term -e ranger
@@ -69,8 +70,8 @@ bindsym $mod+a		exec $term -e qalc
 bindsym $mod+s		gaps inner current plus 5
 bindsym $mod+Shift+s	gaps inner current minus 5
 
-# bindsym $mod+d		exec dmenu_run
-bindsym $mod+d		exec rofi -show run
+bindsym $mod+d		exec dmenu_run
+# bindsym $mod+d		exec rofi -show run
 
 #bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
 
