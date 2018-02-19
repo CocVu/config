@@ -16,7 +16,9 @@ vnoremap > >gv " move block
 noremap  <Leader>o :tabnew<CR>
 noremap  <Leader>x :tabclose<CR>
 noremap  <Leader>v :call ToggleMouse()<CR>
-noremap  <Leader>e :wq<CR>
+noremap  <Leader>qq :wq<CR>
+noremap  <Leader>qQ :wq!<CR>
+noremap  <Leader>fs :w<CR>
 noremap  <Leader>E :wqa!<CR>
 noremap  <Leader>y "+y
 noremap  <C-c> "+y
@@ -37,8 +39,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'Valloric/YouCompleteMe' 	"auto complete
 Plugin 'python-mode/python-mode' 	" python
-Plugin 'derekwyatt/vim-scala' 		" scala
-Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'derekwyatt/vim-scala' 		" scala
+"Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-pathogen'
 Plugin 'tpope/vim-surround'		" 'Hello world!' cs'<q> <q>Hello world!</q> vS add 
@@ -47,7 +49,7 @@ Plugin 'Lokaltog/powerline' 		" power line mode
 Plugin 'jiangmiao/auto-pairs'           "auto closing pair brak
 Plugin 'SirVer/ultisnips' 		"snippets
 Plugin 'honza/vim-snippets'
-Plugin 'jrozner/vim-antlr'              "antlr
+"Plugin 'jrozner/vim-antlr'              "antlr
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plugin 'easymotion/vim-easymotion' 	"easy motion Leader Leader j or k
 Plugin 'scrooloose/nerdcommenter' 	"commnent Leader cc cu ma md
@@ -195,15 +197,29 @@ endfunction
 " +-------------+
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+"map  <Leader>f <Plug>(easymotion-bd-f)
+"nmap <Leader>f <Plug>(easymotion-overwin-f)
 nmap s <Plug>(easymotion-overwin-f2)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-map  <Leader>f <Plug>(easymotion-bd-w)
-nmap <Leader>f <Plug>(easymotion-overwin-w)
+"map  <Leader>f <Plug>(easymotion-bd-w)
+"nmap <Leader>f <Plug>(easymotion-overwin-w)
 
 " +-------------+
 " | TAG BAR     |
 " +-------------+
 nmap <F8> :TagbarToggle<CR>
+" +-------------+
+" |  READ FILE  |
+" +-------------+
+" Read-only .doc through antiword
+autocmd BufReadPre *.doc silent set ro
+autocmd BufReadPost *.doc silent %!antiword "%"
+
+" Read-only odt/odp through odt2txt
+autocmd BufReadPre *.odt,*.odp silent set ro
+autocmd BufReadPost *.odt,*.odp silent %!odt2txt "%"
+
+" Read-only pdf through pdftotext
+autocmd BufReadPre *.pdf silent set ro
+autocmd BufReadPost *.pdf silent %!pdftotext -nopgbrk -layout -q -eol unix "%" - | fmt -w78
