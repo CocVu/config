@@ -125,10 +125,9 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (c++-mode (helm-make-build-dir . "build/"))
-  (global-git-commit-mode t)
   (desktop-save-mode)
   (desktop-read)
+  (global-git-commit-mode t)
  )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
