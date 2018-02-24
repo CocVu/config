@@ -113,10 +113,10 @@
               '((shell :variables
                        shell-default-position 'bottom
                        shell-default-height 30
-                       shell-default-shell 'eshell
+                       ;; shell-default-shell 'eshell
                        shell-default-term-shell "/bin/bash"
-                       shell-enable-smart-eshell t
-                       shell-protect-eshell-prompt nil
+                       ;; shell-enable-smart-eshell t
+                       ;; shell-protect-eshell-prompt nil
                        )))
 
 (setq yas-snippet-dirs '("~/.emacs.d/private/snippets"))
@@ -131,6 +131,7 @@
   (desktop-read)
   (global-git-commit-mode t)
   (setq-default tab-width 4)
+  (add-hook 'term-mode-hook 'toggle-truncate-lines)
  )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
