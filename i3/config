@@ -28,6 +28,8 @@ exec --no-startup-id nm-applet
 exec_always 			exec xmodmap ~/.config/.Xmodmap
 
 
+bindsym $mod+x          exec xmodmap ~/.config/.Xmodmap
+
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
 
@@ -50,6 +52,8 @@ bindsym $mod+Shift+w		exec qutebrowser
 
 bindsym $mod+p			exec evince
 bindsym $mod+e			exec emacs
+bindsym $mod4+i			exec ibus-daemon
+bindsym $mod4+Shift+i			exec killall ibus-daemon
 #bindsym $mod+Shift+e	exec $mail
 
 bindsym $mod+r 		exec $term -e ranger
