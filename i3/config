@@ -25,7 +25,8 @@ exec --no-startup-id nm-applet
  }
 
 # exec_always 			exec bash ~/.config/polybar/launch.sh
-exec_always 			    exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
+exec_always 			    exec setxkbmap -option 
+exec_always                 xmodmap ~/.config/.Xmodmap
 
 
 bindsym $mod4+x             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
