@@ -25,10 +25,10 @@ exec --no-startup-id nm-applet
  }
 
 # exec_always 			exec bash ~/.config/polybar/launch.sh
-exec_always 			exec xmodmap ~/.config/.Xmodmap
+exec_always 			    exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
 
 
-bindsym $mod+x          exec xmodmap ~/.config/.Xmodmap
+bindsym $mod4+x             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
 
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
@@ -47,8 +47,8 @@ bindsym $mod+Tab		workspace back_and_forth
 
 bindsym $mod+q			kill
 
-bindsym $mod+w			exec --no-startup-id $browser
-bindsym $mod+Shift+w		exec qutebrowser
+bindsym $mod+w          exec --no-startup-id $browser
+bindsym $mod+Shift+w		exec --no-startup-id firefox -private-window
 
 bindsym $mod+p			exec evince
 bindsym $mod+e			exec emacs
@@ -219,3 +219,16 @@ bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/win
 # (Note that those lines will quickly become long, so typically you would store
 #  them in a script with proper indentation.)
 #bindsym $mod+Home		 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+# set $mod4 System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+# mode "$mod4" {
+#     bindsym l exec --no-startup-id i3exit lock, mode "default"
+#     bindsym e exec --no-startup-id i3exit logout, mode "default"
+#     bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#     bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }

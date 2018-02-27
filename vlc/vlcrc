@@ -3984,7 +3984,7 @@ skins2-last=/usr/share/vlc/skins2/default.vlt
 #loop=0
 
 # Repeat current item (boolean)
-repeat=1
+#repeat=0
 
 # Play and exit (boolean)
 #play-and-exit=0
@@ -4023,7 +4023,7 @@ repeat=1
 #auto-preparse=1
 
 # Allow metadata network access (boolean)
-metadata-network-access=1
+#metadata-network-access=0
 
 # Services discovery modules (string)
 #services-discovery=
