@@ -1,0 +1,317 @@
+[03/07/18, 22:47:43:010] info: ╔═════════════════════════════════════════════════════════════════════════════╗
+[03/07/18, 22:47:43:011] info: ║      Slack 3.0.5, linux 4.15.3-2-ARCH on x64 at 03/07/18, 22:47:43:007      ║
+[03/07/18, 22:47:43:011] info: ╚═════════════════════════════════════════════════════════════════════════════╝
+[03/07/18, 22:47:43:429] info: Initializing local storage instance at path: /home/coc/.config/Slack/local-settings.json
+[03/07/18, 22:47:43:870] info: TraceRecorder: setting up trace recorder, trace will be stored under /home/coc/.config/Slack/logs/recorded-trace
+[03/07/18, 22:47:45:196] warn: BrowserStore: Couldn't access keychain, make note of it
+[03/07/18, 22:47:45:204] info: Store: persist/REHYDRATE
+[03/07/18, 22:47:45:205] info: initializeMainWindowEpic: Waiting for sign-in
+[03/07/18, 22:47:45:206] info: NetworkStatus: Waiting for network online…
+[03/07/18, 22:47:45:207] info: UpdaterEpics: Updates disabled because
+{
+  "reasons": [
+    "using Linux"
+  ]
+}
+[03/07/18, 22:47:45:252] error: Couldn't get Linux distro info
+[03/07/18, 22:47:45:862] info: Tray Handler: Showing a tray balloon with title: Welcome to Slack!
+[03/07/18, 22:47:45:891] info: Store: INITIALIZE_SETTINGS
+{
+  "releaseChannel": "prod",
+  "platformVersion": {
+    "major": 4,
+    "minor": 15,
+    "build": 3
+  },
+  "isTitleBarHidden": false,
+  "isDevMode": false,
+  "appVersion": "3.0.5",
+  "versionName": "Around The World",
+  "devEnv": null,
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "webappSrcPath": null,
+  "webappParams": null,
+  "launchOnStartup": false,
+  "openDevToolsOnStart": false,
+  "logFile": null,
+  "pretendNotReallyWindows10": false,
+  "isAeroGlassEnabled": false,
+  "linux": {
+    "os": "",
+    "release": "",
+    "desktopEnvironment": ""
+  }
+}
+[03/07/18, 22:47:45:893] info: AutoLoginEpic: Checking for autologin.
+[03/07/18, 22:47:45:894] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces.
+[03/07/18, 22:47:45:894] info: Store: AUTOLOGIN_TEAMS_COMPLETE
+[03/07/18, 22:47:45:894] info: signInNewTeamEpic: No teams signed in, showing sign-in window
+[03/07/18, 22:47:46:065] info: SignInEpic: Loading URL in new window
+{
+  "signInUrl": "https://slack.com/signin"
+}
+[03/07/18, 22:47:46:090] info: Store: UPDATE_SETTINGS
+{
+  "hasRunApp": true
+}
+[03/07/18, 22:47:46:094] info: WebContentsMediator: Attaching to new webContents
+[03/07/18, 22:47:46:097] info: Store: ADD_WINDOW
+{
+  "id": 2,
+  "type": "main"
+}
+[03/07/18, 22:47:46:100] info: BrowserViewManager: Starting initialization
+[03/07/18, 22:47:46:101] info: BrowserViewManager: Finished initialization
+{
+  "elapsed": 0
+}
+[03/07/18, 22:47:46:103] info: PersistSettingsWindowBehavior: Loading windowMetrics
+{
+  "settings": null
+}
+[03/07/18, 22:47:46:104] info: PersistSettingsWindowBehavior: Resetting to default window position
+{
+  "settings": {
+    "position": [
+      171,
+      0
+    ],
+    "size": [
+      1024,
+      768
+    ]
+  }
+}
+[03/07/18, 22:47:46:105] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "position": [
+    171,
+    0
+  ],
+  "size": [
+    1024,
+    768
+  ]
+}
+[03/07/18, 22:47:46:207] info: Store: UPDATE_SETTINGS
+{
+  "PrefSSBFileDownloadPath": "/home/coc/Downloads"
+}
+[03/07/18, 22:47:46:209] info: DownloadListener: Downloads directory set to /home/coc/Downloads
+[03/07/18, 22:47:46:209] info: Application: Setting main window ID
+{
+  "id": 2
+}
+[03/07/18, 22:47:46:211] info: App: Welcome to Slack 3.0.5 x64
+[03/07/18, 22:47:46:211] info: App load time: 3616ms
+[03/07/18, 22:47:46:630] info: Store: SET_FULL_SCREEN
+[03/07/18, 22:47:47:961] info: NetworkStatus: Response from api.test
+{
+  "status": "online"
+}
+[03/07/18, 22:47:47:962] info: Store: SET_NETWORK_STATUS online
+[03/07/18, 22:48:57:437] info: SignInEpic: Sign-in window closed
+[03/07/18, 22:48:57:438] info: maybeQuitAppAction
+{
+  "canceledSignIn": true,
+  "hasNoTeams": true
+}
+[03/07/18, 22:48:57:438] info: SignInEpic: End of the road
+{
+  "action": "QUIT_APP"
+}
+[03/07/18, 22:48:57:438] info: Store: QUIT_APP
+[03/07/18, 22:48:57:724] info: Allowing window close because user chose to quit
+[03/07/18, 22:48:57:725] info: App: Disposing application
+[03/07/18, 22:48:57:726] info: Store: REMOVE_WINDOW 2
+[03/07/18, 22:48:57:742] info: Store: QUIT_APP
+[03/07/18, 22:49:01:312] info: ╔═════════════════════════════════════════════════════════════════════════════╗
+[03/07/18, 22:49:01:313] info: ║      Slack 3.0.5, linux 4.15.3-2-ARCH on x64 at 03/07/18, 22:49:01:309      ║
+[03/07/18, 22:49:01:313] info: ╚═════════════════════════════════════════════════════════════════════════════╝
+[03/07/18, 22:49:01:526] info: Initializing local storage instance at path: /home/coc/.config/Slack/local-settings.json
+[03/07/18, 22:49:01:762] info: TraceRecorder: setting up trace recorder, trace will be stored under /home/coc/.config/Slack/logs/recorded-trace
+[03/07/18, 22:49:02:029] info: BrowserStore: Keychain access previously denied, don't ask again
+[03/07/18, 22:49:02:041] info: Store: persist/REHYDRATE
+{
+  "appTeams": {
+    "selectedTeamId": null,
+    "teamsByIndex": [],
+    "teamsToSignOut": []
+  },
+  "dialog": "[REDACTED]",
+  "downloads": "[REDACTED]",
+  "settings": {
+    "appVersion": "3.0.5",
+    "versionName": "Around The World",
+    "platform": "linux",
+    "platformVersion": {
+      "major": 4,
+      "minor": 15,
+      "build": 3
+    },
+    "isWin10": false,
+    "isBeforeWin10": false,
+    "resourcePath": "/usr/lib/slack/resources/app.asar",
+    "webappSrcPath": null,
+    "webappParams": null,
+    "isDevMode": false,
+    "devEnv": null,
+    "logFile": null,
+    "openDevToolsOnStart": false,
+    "pretendNotReallyWindows10": false,
+    "releaseChannel": "prod",
+    "autoHideMenuBar": false,
+    "isTitleBarHidden": false,
+    "hasRunApp": true,
+    "hasRunFromTray": false,
+    "reportIssueOnStartup": false,
+    "runFromTray": true,
+    "launchOnStartup": false,
+    "spellcheckerLanguage": null,
+    "zoomLevel": 0,
+    "workspaceIdleTimeout": 21600000,
+    "whitelistedUrlSchemes": [
+      "http:",
+      "https:",
+      "mailto:",
+      "skype:",
+      "spotify:",
+      "live:",
+      "callto:",
+      "tel:",
+      "im:",
+      "sip:",
+      "sips:",
+      "slack:"
+    ],
+    "isTitleBarForcedByUser": false,
+    "PrefSSBFileDownloadPath": "/home/coc/Downloads",
+    "notificationMethod": null,
+    "notificationPlayback": null,
+    "notifyPosition": {
+      "corner": "bottom_right",
+      "display": "same_as_app"
+    },
+    "locale": "en-US",
+    "useHwAcceleration": true,
+    "os": false,
+    "release": false,
+    "desktopEnvironment": false,
+    "isAeroGlassEnabled": false,
+    "linux": {
+      "os": "",
+      "release": "",
+      "desktopEnvironment": ""
+    }
+  },
+  "teams": "[REDACTED]",
+  "unreads": {},
+  "windowFrame": {
+    "windowSettings": {
+      "position": [
+        171,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ]
+    },
+    "isFullScreen": false
+  }
+}
+[03/07/18, 22:49:02:043] info: initializeMainWindowEpic: Waiting for sign-in
+[03/07/18, 22:49:02:043] info: NetworkStatus: Waiting for network online…
+[03/07/18, 22:49:02:044] info: UpdaterEpics: Updates disabled because
+{
+  "reasons": [
+    "using Linux"
+  ]
+}
+[03/07/18, 22:49:02:074] error: Couldn't get Linux distro info
+[03/07/18, 22:49:02:191] info: Store: INITIALIZE_SETTINGS
+{
+  "releaseChannel": "prod",
+  "platformVersion": {
+    "major": 4,
+    "minor": 15,
+    "build": 3
+  },
+  "isTitleBarHidden": false,
+  "isDevMode": false,
+  "appVersion": "3.0.5",
+  "versionName": "Around The World",
+  "devEnv": null,
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "webappSrcPath": null,
+  "webappParams": null,
+  "launchOnStartup": false,
+  "openDevToolsOnStart": false,
+  "logFile": null,
+  "pretendNotReallyWindows10": false,
+  "isAeroGlassEnabled": false,
+  "linux": {
+    "os": "",
+    "release": "",
+    "desktopEnvironment": ""
+  }
+}
+[03/07/18, 22:49:02:193] info: AutoLoginEpic: Checking for autologin.
+[03/07/18, 22:49:02:194] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces.
+[03/07/18, 22:49:02:195] info: Store: AUTOLOGIN_TEAMS_COMPLETE
+[03/07/18, 22:49:02:195] info: signInNewTeamEpic: No teams signed in, showing sign-in window
+[03/07/18, 22:49:02:211] info: SignInEpic: Loading URL in new window
+{
+  "signInUrl": "https://slack.com/signin"
+}
+[03/07/18, 22:49:02:219] info: WebContentsMediator: Attaching to new webContents
+[03/07/18, 22:49:02:222] info: Store: ADD_WINDOW
+{
+  "id": 2,
+  "type": "main"
+}
+[03/07/18, 22:49:02:224] info: BrowserViewManager: Starting initialization
+[03/07/18, 22:49:02:225] info: BrowserViewManager: Finished initialization
+{
+  "elapsed": 1
+}
+[03/07/18, 22:49:02:227] info: PersistSettingsWindowBehavior: Loading windowMetrics
+{
+  "settings": {
+    "position": [
+      171,
+      0
+    ],
+    "size": [
+      1024,
+      768
+    ]
+  }
+}
+[03/07/18, 22:49:02:245] info: Application: Setting main window ID
+{
+  "id": 2
+}
+[03/07/18, 22:49:02:247] info: App: Welcome to Slack 3.0.5 x64
+[03/07/18, 22:49:02:247] info: App load time: 1120ms
+[03/07/18, 22:49:02:321] info: Store: SET_FULL_SCREEN
+[03/07/18, 22:49:04:266] info: NetworkStatus: Response from api.test
+{
+  "status": "online"
+}
+[03/07/18, 22:49:04:267] info: Store: SET_NETWORK_STATUS online
+[03/07/18, 22:55:46:283] info: SignInEpic: Sign-in window closed
+[03/07/18, 22:55:46:284] info: maybeQuitAppAction
+{
+  "canceledSignIn": true,
+  "hasNoTeams": true
+}
+[03/07/18, 22:55:46:284] info: SignInEpic: End of the road
+{
+  "action": "QUIT_APP"
+}
+[03/07/18, 22:55:46:285] info: Store: QUIT_APP
+[03/07/18, 22:55:46:291] info: Allowing window close because user chose to quit
+[03/07/18, 22:55:46:294] info: App: Disposing application
+[03/07/18, 22:55:46:295] info: Store: REMOVE_WINDOW 2
+[03/07/18, 22:55:46:318] info: Store: QUIT_APP

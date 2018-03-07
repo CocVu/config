@@ -1,0 +1,8 @@
+[03/07/18, 22:49:02:843] info: ╔═════════════════════════════════════════════════════════════════════════════╗
+[03/07/18, 22:49:02:844] info: ║      Slack 3.0.5, linux 4.15.3-2-ARCH on x64 at 03/07/18, 22:49:02:840      ║
+[03/07/18, 22:49:02:844] info: ╚═════════════════════════════════════════════════════════════════════════════╝
+[03/07/18, 22:49:03:101] info: Initializing local storage instance at path: /home/coc/.config/Slack/local-settings.json
+[03/07/18, 22:49:04:268] info: Store: SET_NETWORK_STATUS online
+[03/07/18, 22:55:46:285] info: Store: QUIT_APP
+[03/07/18, 22:55:46:296] info: Store: REMOVE_WINDOW 2
+[03/07/18, 22:55:46:319] info: Store: QUIT_APP
