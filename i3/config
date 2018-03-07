@@ -30,6 +30,7 @@ exec_always                 xmodmap ~/.config/.Xmodmap
 
 
 bindsym $mod4+x             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
+bindsym $mod4+Shift+x       exec setxkbmap -option
 
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
@@ -52,6 +53,7 @@ bindsym $mod+w          exec --no-startup-id $browser
 bindsym $mod+Shift+w		exec --no-startup-id firefox -private-window
 
 bindsym $mod+p			exec evince
+bindsym $mod+Shift+p	exec --no-startup-id pinta
 bindsym $mod+e			exec emacs
 bindsym $mod4+i			exec ibus-daemon
 bindsym $mod4+Shift+i			exec killall ibus-daemon
