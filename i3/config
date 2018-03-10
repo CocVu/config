@@ -1,7 +1,6 @@
 for_window [class="^.*"] border pixel 3
 gaps inner 5 
 gaps outer 5
-
 #Basic settings
 set $mod Mod1
 set $mod4 Mod4
@@ -26,14 +25,13 @@ exec --no-startup-id nm-applet
 
 # exec_always 			exec bash ~/.config/polybar/launch.sh
 # exec_always 			    exec setxkbmap -option 
-exec_always                 xmodmap ~/.config/.Xmodmap
-
-
+exec_always                 exec --no=startup-id setxkbmap -option && xmodmap ~/.config/.Xmodmap
 bindsym $mod4+x             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
+
 bindsym $mod4+Shift+x       exec setxkbmap -option
 
 bindsym $mod+Return 		exec $term
-bindsym $mod+Shift+Return 	exec ~/.config/.i3/current.sh
+bindsym $mod+Shift+Return 	exec ~/.config/.i3/currentpwd.sh
 
 bindsym $mod+Shift+space 	floating toggle
 #bindsym $mod+space		focus mode_toggle
@@ -54,8 +52,8 @@ bindsym $mod+Shift+w		exec --no-startup-id firefox -private-window
 
 bindsym $mod+p			exec evince
 bindsym $mod+Shift+p	exec --no-startup-id pinta
-bindsym $mod+e			exec emacs
-bindsym $mod4+i			exec ibus-daemon
+bindsym $mod+e			        exec emacs
+bindsym $mod4+i                 exec ibus-daemon
 bindsym $mod4+Shift+i			exec killall ibus-daemon
 #bindsym $mod+Shift+e	exec $mail
 
@@ -72,6 +70,8 @@ bindsym $mod+Shift+o	resize grow width 10 px or 10 ppt
 
 
 bindsym $mod+a		exec $term -e qalc
+bindsym $mod+c  exec $term -e qalc
+bindsym XF86Calculator		exec $term -e qalc
 #bindsym $mod+Shift+a	exec audacity
 
 bindsym $mod+s		gaps inner current plus 5
@@ -86,20 +86,20 @@ bindsym $mod+f		fullscreen toggle
 #bindsym $mod+Shift+f	exec thunar
 
 #bindsym $mod+g		exec --no-startup-id gimp; workspace $ws5
-bindsym $mod+n		exec stardict -h 
-bindsym $mod+Shift+n	exec killall stardict
+bindsym $mod+n		     exec stardict -h 
+bindsym $mod+Shift+n     exec killall stardict
 
-bindsym $mod+h		focus left
-bindsym $mod+Shift+h	move left 30
+bindsym $mod+h		     focus left
+bindsym $mod+Shift+h	 move left 30
 
-bindsym $mod+j		focus down
-bindsym $mod+Shift+j	move down 30
+bindsym $mod+j		     focus down
+bindsym $mod+Shift+j	 move down 30
 
-bindsym $mod+k		focus up
-bindsym $mod+Shift+k	move up 30
+bindsym $mod+k		     focus up
+bindsym $mod+Shift+k	 move up 30
 #
-bindsym $mod+l		focus right
-bindsym $mod+Shift+l	move right 30
+bindsym $mod+l          focus right
+bindsym $mod+Shift+l    move right 30
 
 bindsym $mod+z		gaps outer current plus 5
 bindsym $mod+Shift+z	gaps outer current minus 5
@@ -109,8 +109,6 @@ bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+x	exec shutdown now
 bindsym $mod+Shift+x	 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+c		split toggle
-bindsym $mod+Shift+c	reload
 
 bindsym $mod+v		split v  exec $term
 bindsym $mod+Shift+v	split h  exec $term
@@ -119,7 +117,6 @@ bindsym $mod+Shift+v	split h  exec $term
 
 #Function Buttons
 bindsym $mod+Shift+F1  exec poweroff 
-bindsym F2  exec $term -e qalc
 
 bindsym F11		fullscreen toggle
 
@@ -187,7 +184,6 @@ bindsym XF86AudioStop		exec --no-startup-id mocp -G
 
 #END
 
-bindsym XF86Calculator		exec $term -e qalc
 #______________________________dell latitude
 
 
@@ -206,32 +202,96 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Touchpad controls
 # Rotate
 bindsym $mod+Control+Left exec xrandr --output LVDS1 --rotate left; exec i3-msg restart
+bindsym $mod+Control+h exec xrandr --output LVDS1 --rotate left; exec i3-msg restart
 
 bindsym $mod+Control+Right exec xrandr --output LVDS1 --rotate right; exec i3-msg restart
+bindsym $mod+Control+l exec xrandr --output LVDS1 --rotate right; exec i3-msg restart
 
 bindsym $mod+Control+Up exec xrandr --output LVDS1 --rotate normal; exec i3-msg restart
+bindsym $mod+Control+k exec xrandr --output LVDS1 --rotate normal; exec i3-msg restart
 
 bindsym $mod+Control+Down exec xrandr --output LVDS1 --rotate inverted; exec i3-msg restart
+bindsym $mod+Control+j exec xrandr --output LVDS1 --rotate inverted; exec i3-msg restart
 
 bindsym Print 		exec scrot -e 'cp $f ~/Pictures/output.png && mv $f ~/Pictures'
 bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/windows'
 
-# Layout workspace
-#i3-msg "workspace 1; append_layout /root/.config/i3/workspace-1.json"
-# In your i3 configuration file, you can autostart i3-msg like this:
-# (Note that those lines will quickly become long, so typically you would store
-#  them in a script with proper indentation.)
-#bindsym $mod+Home		 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
-# set $mod4 System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-# mode "$mod4" {
-#     bindsym l exec --no-startup-id i3exit lock, mode "default"
-#     bindsym e exec --no-startup-id i3exit logout, mode "default"
-#     bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+mode "M" {
+# mouse speed require xdotool
+    set $s1 40
+    set $s2 10
+    set $s3 50
 
-#     # back to normal: Enter or Escape
-#     bindsym Return mode "default"
-#     bindsym Escape mode "default"
-# }
+    # Mouse movement (slow/fine-tuned) -- vim keybindings
+    bindsym h exec xdotool mousemove_relative -- -$s1 0
+
+    bindsym i exec xdotool mousemove 400 400
+    bindsym j exec xdotool mousemove_relative 0 $s1
+    bindsym k exec xdotool mousemove_relative -- 0 -$s1
+    bindsym l exec xdotool mousemove_relative $s1 0
+
+    bindsym p exec xdotool mousemove_relative -- $s1 -$s1
+    bindsym u exec xdotool mousemove_relative -- -$s1 -$s1
+    bindsym period exec xdotool mousemove_relative -- $s1 $s1
+    bindsym n exec xdotool mousemove_relative -- -$s1 $s1
+
+    # Mouse movement (slow/fine-tuned) -- arrow keys
+    bindsym Left exec xdotool mousemove_relative -- -$s1 0
+    bindsym Down exec xdotool mousemove_relative 0 $s1
+    bindsym Up exec xdotool mousemove_relative -- 0 -$s1
+    bindsym Right exec xdotool mousemove_relative $s1 0
+
+    # Mouse movement (quicker) -- vim keybindings
+    bindsym Shift+h exec xdotool mousemove_relative -- -$s2 0
+    bindsym Shift+j exec xdotool mousemove_relative 0 $s2
+    bindsym Shift+k exec xdotool mousemove_relative -- 0 -$s2
+    bindsym Shift+l exec xdotool mousemove_relative $s2 0
+
+    # Mouse movement (quicker) -- arrow keys
+    bindsym Shift+Left exec xdotool mousemove_relative -- -$s2 0
+    bindsym Shift+Down exec xdotool mousemove_relative 0 $s2
+    bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$s2
+    bindsym Shift+Right exec xdotool mousemove_relative $s2 0
+
+    # Mouse movement (fast) -- vim keybindings
+    bindsym Shift+$mod2+h exec xdotool mousemove_relative -- -$s3 0
+    bindsym Shift+$mod2+j exec xdotool mousemove_relative 0 $s3
+    bindsym Shift+$mod2+k exec xdotool mousemove_relative -- 0 -$s3
+    bindsym Shift+$mod2+l exec xdotool mousemove_relative $s3 0
+
+    # Mouse movement (fast) -- arrow keys
+    bindsym Shift+$mod2+Left exec xdotool mousemove_relative -- -$s3 0
+    bindsym Shift+$mod2+Down exec xdotool mousemove_relative 0 $s3
+    bindsym Shift+$mod2+Up exec xdotool mousemove_relative -- 0 -$s3
+    bindsym Shift+$mod2+Right exec xdotool mousemove_relative $s3 0
+    # Left Click
+    bindsym f exec xdotool click 1
+    # Middle Click
+    bindsym d exec xdotool click 2
+    # Right Click
+    bindsym s exec xdotool click 3
+    # Left Click-and-drag f move and F
+    bindsym Shift+f exec xdotool mousedown 1
+    bindsym x       exec xdotool mousedown 1
+    # Middle Click-and-drag 
+    bindsym Shift+d exec xdotool mousedown 2
+    # Right Click-and-drag
+    bindsym Shift+s exec xdotool mousedown 3
+    # Left Drag release
+    bindsym $mod2+f exec xdotool mouseup 1
+    # Middle Drag release
+    bindsym $mod2+d exec xdotool mouseup 2
+    # Right Drag release
+    bindsym $mod2+s exec xdotool mouseup 3
+    # return to normal keybindings -- IMPORTANT!!
+    bindsym Escape mode "default"
+    bindsym $mod4+m mode "default"
+    bindsym $mod+m mode "default"
+}
+
+mode "team" {
+    bindsym $mod+Shift+t mode "default"
+}
+bindsym $mod+m mode "M"
+bindsym $mod+Shift+t mode "team"
+bindsym $mod4+m mode "M"
