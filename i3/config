@@ -92,17 +92,17 @@ bindsym $mod+Shift+n     exec killall stardict
 bindsym $mod+h		     focus left
 bindsym $mod+Shift+h	 move left 30
 
-bindsym $mod+j		     focus down
-bindsym $mod+Shift+j	 move down 30
+bindsym $mod+j		        focus down
+bindsym $mod+Shift+j	    move down 30
 
-bindsym $mod+k		     focus up
-bindsym $mod+Shift+k	 move up 30
+bindsym $mod+k		        focus up
+bindsym $mod+Shift+k	    move up 30
 #
-bindsym $mod+l          focus right
-bindsym $mod+Shift+l    move right 30
+bindsym $mod+l              focus right
+bindsym $mod+Shift+l        move right 30
 
-bindsym $mod+z		gaps outer current plus 5
-bindsym $mod+Shift+z	gaps outer current minus 5
+bindsym $mod+z		        gaps outer current plus 5
+bindsym $mod+Shift+z	    gaps outer current minus 5
 
 bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+q	kill
@@ -110,13 +110,14 @@ bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
 bindsym $mod+Shift+x	 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
-bindsym $mod+v		split v  exec $term
-bindsym $mod+Shift+v	split h  exec $term
+bindsym $mod+v		     split v  exec $term
+bindsym $mod+Shift+v	 split h  exec $term
 
 #END
 
 #Function Buttons
 bindsym $mod+Shift+F1  exec poweroff 
+bindsym $mod+F1        exec systemctl suspend
 
 bindsym F11		fullscreen toggle
 
