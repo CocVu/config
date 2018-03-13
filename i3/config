@@ -279,11 +279,11 @@ mode "M" {
     # Right Click-and-drag
     bindsym Shift+s exec xdotool mousedown 3
     # Left Drag release
-    bindsym $mod2+f exec xdotool mouseup 1
+    bindsym $mod+f exec xdotool mouseup 1
     # Middle Drag release
-    bindsym $mod2+d exec xdotool mouseup 2
+    bindsym $mod+d exec xdotool mouseup 2
     # Right Drag release
-    bindsym $mod2+s exec xdotool mouseup 3
+    bindsym $mod+s exec xdotool mouseup 3
     # return to normal keybindings -- IMPORTANT!!
     bindsym Escape mode "default"
     bindsym $mod4+m mode "default"

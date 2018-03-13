@@ -15,23 +15,22 @@ alias grep='grep --color=auto'
 eval "`dircolors -b $DIR_COLORS`"
 
 set -o vi
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
-export JAVA=/usr/lib/jvm/java-8-openjdk/jre/bin
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export JAVA=$JAVA_HOME/bin/java
+export PATH=/usr/lib/jvm/java-8-openjdk/jre/bin/:$PATH
 
-export PATH=/usr/lib/jvm/java-8-openjdk/jre/bin:$PATH
-
-export HADOOP_HOME=/home/coc/hadoop-2.9.0
-export HADOOP_CONF_DIR=/home/coc/hadoop-2.9.0/etc/hadoop
-export HADOOP_MAPRED_HOME=/home/coc/hadoop-2.9.0
-export HADOOP_COMMON_HOME=/home/coc/hadoop-2.9.0
-export HADOOP_HDFS_HOME=/home/coc/hadoop-2.9.0
-export YARN_HOME=/home/coc/hadoop-2.9.0
-# export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-# export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
+export HADOOP_HOME=/home/coc/hadoop-2.7.5
+export HADOOP_CONF_DIR=/home/coc/hadoop-2.7.5/etc/hadoop
+export HADOOP_MAPRED_HOME=/home/coc/hadoop-2.7.5
+export HADOOP_COMMON_HOME=/home/coc/hadoop-2.7.5
+export HADOOP_HDFS_HOME=/home/coc/hadoop-2.7.5
+export YARN_HOME=/home/coc/hadoop-2.7.5
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
 #add hadoop 2 bin/ directory to PATH
-# export HADOOP_PID_DIR=/home/coc/hadoop-2.7.5/tmp/pid
+export HADOOP_PID_DIR=/home/coc/hadoop-2.7.5/tmp/pid
 
-export PATH=$PATH:/home/coc/hadoop-2.9.0/bin
+export PATH=$PATH:/home/coc/hadoop-2.7.5/bin
 export PATH=$PATH:/home/coc/android-studio/bin
 

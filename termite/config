@@ -11,12 +11,8 @@ font = Monospace 10
 scrollback_lines = 10000
 search_wrap = true
 filter_unmatched_urls = true
-
-[colors]
 background = rgba(7, 5, 0, 0.8)
-foreground = #91820e
 
-highlight = #2a1368
 
 color0 = #91820e
 # color1 = #705050
