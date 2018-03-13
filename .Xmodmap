@@ -4,8 +4,5 @@ keysym Caps_Lock = Escape
 keysym Escape = Caps_Lock
 clear control
 add control = Control_L
-!keycode  135 = Down
-!keycode  105 = Down
-
-keycode  135 = b
-keycode  105 = b
+keycode  135 = Down
+keycode  105 = Down
