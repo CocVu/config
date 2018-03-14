@@ -190,9 +190,11 @@ bindsym XF86AudioStop		exec --no-startup-id mocp -G
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod4+Right exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym $mod4+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym $mod4+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod4+Left exec --no-startup-id pactl set-sink-volume 0 -5% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 bindsym $mod4+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
