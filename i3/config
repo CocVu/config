@@ -223,17 +223,22 @@ bindsym $mod+Print 	exec scrot -s -e 'cp $f ~/Pictures/output.png && mv $f ~/win
 
 mode "M" {
 # mouse speed require xdotool
-    set $s1 40
-    set $s2 10
+    set $s1 100
+    set $s2 15
     set $s3 50
 
     # Mouse movement (slow/fine-tuned) -- vim keybindings
-    bindsym h exec xdotool mousemove_relative -- -$s1 0
 
     bindsym i exec xdotool mousemove 400 400
+    bindsym h exec xdotool mousemove_relative -- -$s1 0
     bindsym j exec xdotool mousemove_relative 0 $s1
     bindsym k exec xdotool mousemove_relative -- 0 -$s1
     bindsym l exec xdotool mousemove_relative $s1 0
+    # bindsym i exec xdotool mousemove 400 400
+    # bindsym h exec xdotool mousemove_relative --sync -$s1 0
+    # bindsym j exec xdotool mousemove_relative --sync 0 $s1
+    # bindsym k exec xdotool mousemove_relative --sync 0 -$s1
+    # bindsym l exec xdotool mousemove_relative --sync $s1 0
 
     bindsym p exec xdotool mousemove_relative -- $s1 -$s1
     bindsym u exec xdotool mousemove_relative -- -$s1 -$s1
@@ -271,10 +276,10 @@ mode "M" {
     bindsym Shift+$mod2+Right exec xdotool mousemove_relative $s3 0
     # Left Click
     bindsym f exec xdotool click 1
-    # Middle Click
-    bindsym d exec xdotool click 2
-    # Right Click
-    bindsym s exec xdotool click 3
+    bindsym m exec xdotool click 1
+    # bindsym Escape mode "default"
+    # bindsym d exec xdotool click 2
+    # bindsym s exec xdotool click 3
     # Left Click-and-drag f move and F
     bindsym Shift+f exec xdotool mousedown 1
     bindsym x       exec xdotool mousedown 1
@@ -290,6 +295,8 @@ mode "M" {
     bindsym $mod+s exec xdotool mouseup 3
     # return to normal keybindings -- IMPORTANT!!
     bindsym Escape mode "default"
+    bindsym $mod mode "default"
+    bindsym $mod4 mode "default"
     bindsym $mod4+m mode "default"
     bindsym $mod+m mode "default"
 }
