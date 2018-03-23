@@ -46,6 +46,7 @@ bindsym $mod+Tab		workspace back_and_forth
 
 
 bindsym $mod+q			kill
+bindsym $mod+Shift+q     focus parent,kill
 
 bindsym $mod+w          exec --no-startup-id $browser
 bindsym $mod+Shift+w		exec --no-startup-id firefox -private-window
@@ -104,7 +105,7 @@ bindsym $mod+Shift+l        move right 30
 bindsym $mod+z		        gaps outer current plus 5
 bindsym $mod+Shift+z	    gaps outer current minus 5
 
-bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
+# bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+q	kill
 #bindsym $mod+Shift+x	exec shutdown now
 bindsym $mod+Shift+x	 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
