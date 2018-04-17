@@ -1,0 +1,5 @@
+2018/04/13-13:09:51.485798 7f0cab7fe700 Recovering log #5
+2018/04/13-13:09:51.487165 7f0cab7fe700 Level-0 table #7: started
+2018/04/13-13:09:51.574715 7f0cab7fe700 Level-0 table #7: 35053 bytes OK
+2018/04/13-13:09:51.658304 7f0cab7fe700 Delete type=0 #5
+2018/04/13-13:09:51.658482 7f0cab7fe700 Delete type=3 #4

@@ -40,7 +40,7 @@ modules-left = i3
 modules-center = xwindow
 # modules-right = volume battery wireless-network vpn memory temperature powermenu
 # modules-right = volume battery wireless-network vpn memory powermenu
-modules-right = volume memory temperature date
+modules-right = volume memory temperature battery date 
 
 tray-position = right
 tray-padding = 5

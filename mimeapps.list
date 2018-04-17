@@ -7,3 +7,27 @@ application/http=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 text/plain=vim.desktop
+x-scheme-handler/ftp=userapp-Waterfox-D1MHGZ.desktop
+x-scheme-handler/chrome=userapp-Waterfox-D1MHGZ.desktop
+text/html=firefox.desktop
+application/x-extension-htm=userapp-Waterfox-D1MHGZ.desktop
+application/x-extension-html=userapp-Waterfox-D1MHGZ.desktop
+application/x-extension-shtml=userapp-Waterfox-D1MHGZ.desktop
+application/xhtml+xml=userapp-Waterfox-D1MHGZ.desktop
+application/x-extension-xhtml=userapp-Waterfox-D1MHGZ.desktop
+application/x-extension-xht=userapp-Waterfox-D1MHGZ.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Waterfox-D1MHGZ.desktop;
+x-scheme-handler/https=userapp-Waterfox-D1MHGZ.desktop;
+x-scheme-handler/ftp=userapp-Waterfox-D1MHGZ.desktop;
+x-scheme-handler/chrome=userapp-Waterfox-D1MHGZ.desktop;
+text/html=userapp-Waterfox-D1MHGZ.desktop;
+application/x-extension-htm=userapp-Waterfox-D1MHGZ.desktop;
+application/x-extension-html=userapp-Waterfox-D1MHGZ.desktop;
+application/x-extension-shtml=userapp-Waterfox-D1MHGZ.desktop;
+application/xhtml+xml=userapp-Waterfox-D1MHGZ.desktop;
+application/x-extension-xhtml=userapp-Waterfox-D1MHGZ.desktop;
+application/x-extension-xht=userapp-Waterfox-D1MHGZ.desktop;

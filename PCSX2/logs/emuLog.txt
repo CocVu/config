@@ -1,0 +1,34 @@
+PCSX2 1.4.0-0- compiled on Dec 31 2017
+Savestate version: 0x9a0b0000
+
+Host Machine Init:
+	Operating System =  Linux 4.15.13-1-ARCH x86_64
+	Physical RAM     =  3822 MB
+	CPU name         =  Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz
+	Vendor/Model     =  GenuineIntel (stepping 09)
+	CPU speed        =  2.589 ghz (4 logical threads)
+	x86PType         =  Standard OEM
+	x86Flags         =  bfebfbff 7fbae3ff
+	x86EFlags        =  28100000
+
+x86 Features Detected:
+	SSE2.. SSE3.. SSSE3.. SSE4.1.. SSE4.2.. AVX
+
+Installing POSIX SIGSEGV handler...
+Reserving memory for recompilers...
+
+Loading plugins...
+	Binding   GS: /usr/lib32/pcsx2/libGSnull.so 
+GSnull:Testing GSnull.
+	Binding  PAD: /usr/lib32/pcsx2/libPADnull.so 
+	Binding SPU2: /usr/lib32/pcsx2/libspu2x-2.0.0.so 
+	Binding CDVD: /usr/lib32/pcsx2/libCDVDnull.so 
+	Binding  USB: /usr/lib32/pcsx2/libUSBnull-0.7.0.so 
+	Binding   FW: /usr/lib32/pcsx2/libFWnull-0.7.0.so 
+	Binding DEV9: /usr/lib32/pcsx2/libdev9null-0.5.0.so 
+Plugins loaded successfully.
+
+GSnull:GSnull plugin version 0,1
+GSnull:GS init.
+(GameDB) 9693 games on record (loaded in 148ms)
+(GameDB) Unloading...

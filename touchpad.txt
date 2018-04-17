@@ -1,0 +1,3 @@
+    TapButton1              = 1
+    TapButton2              = 0
+    TapButton3              = 0

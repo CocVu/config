@@ -1,0 +1,13 @@
+{"type":"analytics.custom.v1","msg":{"ts":1520991102743,"name":"unity.sceneLoad","custom_params":{"level_name":"Preload","level_num":0,"total_levels":8}}}
+{"type":"perf.sceneLoadingTime.v1","msg":{"ts":1520991102777,"scene_name":"Preload","scene_index":0,"background_time":30761592832,"integrate_time":2166569984,"ts_integrate_time":1333814016,"total_time":34210582528}}
+{"type":"analytics.custom.v1","msg":{"ts":1520991104287,"name":"unity.sceneLoad","custom_params":{"level_name":"Client_Preload","level_num":1,"total_levels":8}}}
+{"type":"perf.sceneLoadingTime.v1","msg":{"ts":1520991104302,"scene_name":"Client_Preload","scene_index":1,"background_time":554012032,"integrate_time":39033000,"ts_integrate_time":6000,"total_time":1310665984}}
+{"type":"analytics.custom.v1","msg":{"ts":1520991105021,"name":"unity.sceneLoad","custom_params":{"level_name":"ToastyLeafLogo","level_num":5,"total_levels":8}}}
+{"type":"perf.sceneLoadingTime.v1","msg":{"ts":1520991105036,"scene_name":"ToastyLeafLogo","scene_index":5,"background_time":472436000,"integrate_time":40010004,"ts_integrate_time":137000,"total_time":613972992}}
+{"type":"analytics.custom.v1","msg":{"ts":1520991125109,"name":"unity.sceneLoad","custom_params":{"level_name":"Title","level_num":2,"total_levels":8}}}
+{"type":"perf.sceneLoadingTime.v1","msg":{"ts":1520991125524,"scene_name":"Title","scene_index":2,"background_time":4080803840,"integrate_time":14186664960,"ts_integrate_time":1789263872,"total_time":20362471424}}
+{"type":"analytics.custom.v1","msg":{"ts":1520991142153,"name":"unity.sceneLoad","custom_params":{"level_name":"Title","level_num":2,"total_levels":8}}}
+{"type":"perf.sceneLoadingTime.v1","msg":{"ts":1520991142175,"scene_name":"Title","scene_index":2,"background_time":4249951744,"integrate_time":9278682112,"ts_integrate_time":999077056,"total_time":13771617280}}
+{"type":"analytics.appRunning.v1","msg":{"ts":1520991163733,"duration":62,"local_time_offset":-25200000}}
+{"type":"analytics.appRunning.v1","msg":{"ts":1520991189211,"duration":88,"local_time_offset":-25200000}}
+(1){"type":"analytics.appStop.v1","msg":{"ts":1520991189300}}

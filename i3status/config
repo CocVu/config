@@ -7,6 +7,7 @@ general {
 order += "volume master"
 order += "battery 0"
 order += "tztime local"
+order += "load"
 # order += "ipv6"
 # order += "disk /"
 # order += "run_watch DHCP"
@@ -15,7 +16,6 @@ order += "tztime local"
 # order += "wireless wlan0"
 # order += "ethernet eth0"
 # order += "cpu_temperature 0"
-# order += "load"
 # order += "tztime berlin"
 
 

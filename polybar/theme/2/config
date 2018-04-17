@@ -189,7 +189,8 @@ format-connected = Wireless: <label-connected>
 format-connected-foreground = ${colors.colour_1}
 format-disconnected = <label-disconnected>
 
-label-connected = %essid%  %local_ip%
+label-connected = %essid%
+#label-connected = %essid%  %local_ip%
 label-connected-foreground = ${colors.foreground}
 
 label-disconnected = (None)

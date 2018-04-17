@@ -1,0 +1,1 @@
+Mesa DRI Intel(R) Ivybridge Mobile Intel(R) Core(TM) i5-3320M CPU @ 2.60GHzfreePCLinux 4.15 unknown 64bit38222931512441,2.265,2.265,7.464844,7.885,7.885,0,0,17.61484,2.935807,0,0
