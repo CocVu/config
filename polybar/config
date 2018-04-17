@@ -15,23 +15,22 @@ colour_3	= #CC6666
 monitor = ${env:MONITOR:LVDS1}
 top = true
 width = 100%
-height = 15
-offset-x = 10
-offset-y = 10
-radius = 0.0 
+height = 25
+offset-x = 0
+offset-y = 0
+radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground =  ${colors.foreground}
 
-line-size = 2
+line-size = 4
 
-padding-left = 0
-padding-right = 0
+padding-left = 3
+padding-right = 10
 
-/* khoang cach */
-module-margin-left = 1.5
-module-margin-right = 1.5
+module-margin-left = 2.5
+module-margin-right = 2.5
 
 font-0 = Hack:fontformat=truetype:size=9;1
 font-1 = Hack:fontformat=truetype:size=9;1
@@ -39,15 +38,16 @@ font-2 = FontAwesome:fontformat=truetype:size=9;1
 
 modules-left = i3 
 modules-center = xwindow
-modules-right = volume memory battery wireless-network vpn date
+# modules-right = volume battery wireless-network vpn memory temperature powermenu
+# modules-right = volume battery wireless-network vpn memory powermenu
+modules-right = volume memory temperature date
 
 tray-position = right
-tray-padding = 15
+tray-padding = 5
 tray-offset-y = 0%
-tray-offset-x = 10%
+tray-offset-x = 0%
 tray-maxsize = 18
 tray-detached = true
-/*tray-transparent = true*/
 tray-transparent = false
 tray-color = #1D1F21
 
@@ -91,14 +91,14 @@ interval = 5
 
 format = <label>
 format-prefix-foreground = ${colors.foreground}
-/* format-underline = ${colors.colour_1} */
+format-underline = ${colors.colour_1}
 
-label = %time% | %date% 
+label =  %time%
 
-date = "%d/%m"
-date-alt = "%a %B %d"
+date = "%a %B %d"
+date-alt = "%d-%m-%Y"
 
-time = "%I:%M"
+time = "%I:%M %p"
 time-alt = "%H:%M"
 
 [module/volume]
@@ -106,13 +106,12 @@ type = internal/volume
 
 format-muted-background = ${colors.background}
 format-volume-background = ${colors.background}
-format-volume = <label-volume> 
-label-muted = 
-ramp-volume-2 =
+format-volume = <label-volume> <bar-volume>
+label-muted = Muted
 
-/* bar-volume-width = 15 */
+bar-volume-width = 5
 bar-volume-foreground = ${colors.foreground}
-bar-volume-gradient = true
+bar-volume-gradient = false
 bar-volume-indicator= ~
 bar-volume-indicator-font = 1
 bar-volume-fill = ─
@@ -120,6 +119,73 @@ bar-volume-fill-font = 1
 bar-volume-empty = ─
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.colour_2}
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+
+; Available tags:
+;   <label> (default)
+;   <bar-used>
+;   <bar-free>
+;   <ramp-used>
+;   <ramp-free>
+format = <label> <bar-used>
+
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+;   %percentage_swap_used%
+;   %percentage_swap_free%
+;   %mb_swap_total%
+;   %mb_swap_free%
+;   %mb_swap_used%
+;   %gb_swap_total%
+;   %gb_swap_free%
+;   %gb_swap_used%
+
+# label = RAM %gb_used%
+label = %gb_used%
+
+; Only applies if <bar-used> is used
+bar-used-indicator =
+bar-used-width = 5
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+; Only applies if <ramp-used> is used
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+; Only applies if <ramp-free> is used
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
 
 [module/temperature]
 type = internal/temperature
@@ -158,7 +224,7 @@ margin-bottom = 5
 
 [module/battery]
 type = internal/battery
-full-at = 99
+/* full-at = 100 */
 
 battery = BAT0
 adapter = AC
@@ -166,16 +232,17 @@ poll-interval = 5
 
 time-format = %H:%M
 
-format-charging =   <label-charging>
-format-discharging =   <label-discharging>
+format-charging = CHR: <label-charging>
+format-discharging = DIS: <label-discharging>
+format-full = BAT: FULL
 
 format-charging-foreground = ${colors.colour_1}
 format-discharging-foreground = ${colors.colour_1}
 format-full-foreground = ${colors.colour_1}
 
-label-charging = %percentage%
-label-discharging = %percentage%
-label-full = 
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = Fully charged
 
 label-charging-foreground = ${colors.foreground}
 label-discharging-foreground = ${colors.foreground}
@@ -185,13 +252,15 @@ label-full-foreground = ${colors.foreground}
 type = internal/network
 interface = wlp2s0
 
-interval = 3.0
+interval = 5.0
 accumulate-stats = true
-format-connected =  <label-connected>
+# format-connected = Wireless: <label-connected>
+format-connected = <label-connected>
 format-connected-foreground = ${colors.colour_1}
 format-disconnected = <label-disconnected>
 
-/*label-connected = %essid%  %local_ip%*/
+label-connected = %essid%
+#label-connected = %essid%  %local_ip%
 label-connected-foreground = ${colors.foreground}
 
 label-disconnected = (None)
@@ -207,15 +276,8 @@ format-connected = VPN: <label-connected>
 format-connected-foreground = ${colors.colour_1}
 format-disconnected = <label-disconnected>
 
-label-connected = 
+label-connected = Connected
 label-connected-foreground = ${colors.foreground}
 
-label-disconnected = 
+label-disconnected = (None)
 label-disconnected-foreground = ${colors.foreground}
-
-[module/memory]
-type = internal/memory
-; Seconds to sleep between updates
-; Default: 1
-interval = 3
-label = %gb_used%
