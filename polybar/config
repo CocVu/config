@@ -27,7 +27,7 @@ foreground =  ${colors.foreground}
 line-size = 4
 
 padding-left = 3
-padding-right = 10
+padding-right = 3
 
 module-margin-left = 2.5
 module-margin-right = 2.5
@@ -39,7 +39,7 @@ font-2 = FontAwesome:fontformat=truetype:size=9;1
 modules-left = i3 
 modules-center = xwindow
 # modules-right = volume battery wireless-network vpn memory temperature powermenu
-modules-right = volume vpn memory temperature battery date 
+modules-right = volume wireless-network memory temperature battery date 
 
 tray-position = right
 tray-padding = 5
@@ -92,21 +92,24 @@ format = <label>
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.colour_1}
 
-label =  %time%
+label =  %time% %date%
 
-date = "%a %B %d"
-date-alt = "%d-%m-%Y"
+; date = "%a %B %d"
+; date-alt = "%d-%m-%Y"
 
-time = "%I:%M %p"
-time-alt = "%H:%M"
+date-alt = "%a %B %d"
+date = "%d"
+; pm am
+; time = "%I:%M %p"
+time = "%H:%M"
 
 [module/volume]
 type = internal/volume
 
 format-muted-background = ${colors.background}
 format-volume-background = ${colors.background}
-format-volume = <label-volume> <bar-volume>
-label-muted = Muted
+format-volume = ♪ <label-volume>
+label-muted = ♩
 
 bar-volume-width = 5
 bar-volume-foreground = ${colors.foreground}
@@ -132,7 +135,8 @@ interval = 1
 ;   <bar-free>
 ;   <ramp-used>
 ;   <ramp-free>
-format = <label> <bar-used>
+; format = <label> <bar-used>
+format = <label>
 
 ; Available tokens:
 ;   %percentage_used% (default)
@@ -223,7 +227,7 @@ margin-bottom = 5
 
 [module/battery]
 type = internal/battery
-/* full-at = 100 */
+full-at = 100
 
 battery = BAT0
 adapter = AC
@@ -231,9 +235,9 @@ poll-interval = 5
 
 time-format = %H:%M
 
-format-charging = CHR: <label-charging>
+format-charging = ⚡: <label-charging>
 format-discharging = DIS: <label-discharging>
-format-full = BAT: FULL
+format-full = FULL
 
 format-charging-foreground = ${colors.colour_1}
 format-discharging-foreground = ${colors.colour_1}
@@ -253,7 +257,7 @@ interface = wlp2s0
 
 interval = 5.0
 accumulate-stats = true
-# format-connected = Wireless: <label-connected>
+# format-connected = WiFi: <label-connected>
 format-connected = <label-connected>
 format-connected-foreground = ${colors.colour_1}
 format-disconnected = <label-disconnected>
