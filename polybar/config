@@ -39,7 +39,7 @@ font-2 = FontAwesome:fontformat=truetype:size=9;1
 modules-left = i3 
 modules-center = xwindow
 # modules-right = volume battery wireless-network vpn memory temperature powermenu
-modules-right = volume memory temperature battery date 
+modules-right = volume vpn memory temperature battery date 
 
 tray-position = right
 tray-padding = 5
