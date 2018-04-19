@@ -1,0 +1,13 @@
+** Message: 13:57:45.336: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
+** Message: 13:58:12.553: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
+** Message: 13:58:13.149: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
+** Message: 13:58:13.149: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
+ioctl failed for wlan0, errno = 19 (No such device)
+ioctl failed for wlan0, errno = 19 (No such device)
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM mic_call
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM call
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM mic_call
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM call
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM mic_call
+ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM call
+ioctl failed for wlan0, errno = 19 (No such device)
