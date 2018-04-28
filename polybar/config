@@ -27,7 +27,9 @@ foreground =  ${colors.foreground}
 line-size = 4
 
 padding-left = 3
-padding-right = 3
+
+; padding for icon daemon
+padding-right = 10 
 
 module-margin-left = 2.5
 module-margin-right = 2.5
@@ -237,7 +239,8 @@ time-format = %H:%M
 
 format-charging = ⚡: <label-charging>
 format-discharging = DIS: <label-discharging>
-format-full = FULL
+; format-full = FULL
+format-full = 
 
 format-charging-foreground = ${colors.colour_1}
 format-discharging-foreground = ${colors.colour_1}

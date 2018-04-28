@@ -1,0 +1,46 @@
+[2018-04-25 10:27:10.534] [sharedprocess] [info] main {"machineId":"0aefe7674dcd56bf9430097d73943ff1d18267f5833581d02b9f86d7175c3c34"}
+[2018-04-25 10:27:10.587] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:10.662] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:12.446] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:12.450] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:12.452] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:12.588] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:12.591] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:15.641] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:24.841] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:24.843] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:24.850] [sharedprocess] [info] Scanned user extensions: 0
+[2018-04-25 10:27:24.915] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:24.921] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:37.410] [sharedprocess] [info] Installing extension: python
+[2018-04-25 10:27:41.049] [sharedprocess] [info] Installing extension: cpptools
+[2018-04-25 10:27:42.854] [sharedprocess] [info] Downloaded extension: python
+[2018-04-25 10:27:44.403] [sharedprocess] [info] Downloaded extension: cpptools
+[2018-04-25 10:27:45.406] [sharedprocess] [info] Extracted extension to /home/coc/.vscode/extensions/.ms-vscode.cpptools-0.16.1: ms-vscode.cpptools-0.16.1
+[2018-04-25 10:27:45.406] [sharedprocess] [info] Renamed to /home/coc/.vscode/extensions/ms-vscode.cpptools-0.16.1
+[2018-04-25 10:27:45.406] [sharedprocess] [info] Installation completed. ms-vscode.cpptools-0.16.1
+[2018-04-25 10:27:45.499] [sharedprocess] [info] Extensions installed successfully: ms-vscode.cpptools
+[2018-04-25 10:27:45.641] [sharedprocess] [info] Scanned user extensions: 1
+[2018-04-25 10:27:45.683] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:47.823] [sharedprocess] [info] Extracted extension to /home/coc/.vscode/extensions/.ms-python.python-2018.3.1: ms-python.python-2018.3.1
+[2018-04-25 10:27:47.824] [sharedprocess] [info] Renamed to /home/coc/.vscode/extensions/ms-python.python-2018.3.1
+[2018-04-25 10:27:47.824] [sharedprocess] [info] Installation completed. ms-python.python-2018.3.1
+[2018-04-25 10:27:47.889] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2018-04-25 10:27:48.037] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:27:48.038] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:27:48.083] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:48.087] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:27:50.551] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-04-25 10:28:20.536] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:28:20.538] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:28:20.542] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:28:20.561] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:28:20.563] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:28:20.655] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:28:20.659] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:28:20.663] [sharedprocess] [info] Scanned system extensions: 69
+[2018-04-25 10:28:23.660] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:33:23.692] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:38:23.713] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:43:23.734] [sharedprocess] [info] Scanned user extensions: 2
+[2018-04-25 10:48:23.750] [sharedprocess] [info] Scanned user extensions: 2

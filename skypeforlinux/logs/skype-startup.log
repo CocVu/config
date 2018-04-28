@@ -1,7 +1,13 @@
-** Message: 13:57:45.336: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
-** Message: 13:58:12.553: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
-** Message: 13:58:13.149: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
-** Message: 13:58:13.149: Remote error from secret service: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.secrets was not provided by any .service files
+ioctl failed for wlan0, errno = ioctl failed for wlan019 (, errno = 19No such device) (No such device)
+
+
+(skypeforlinux:2908): libnotify-WARNING **: 23:04:52.990: Failed to connect to proxy
+
+(skypeforlinux:2908): libnotify-WARNING **: 23:04:52.992: Failed to connect to proxy
+
+(skypeforlinux:2908): libnotify-WARNING **: 23:04:52.994: Failed to connect to proxy
+** Message: 23:09:05.822: Remote error from secret service: org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.freedesktop.Secret.Collection' on object at path /org/freedesktop/secrets/collection/login
+** Message: 23:09:05.822: Remote error from secret service: org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.freedesktop.Secret.Collection' on object at path /org/freedesktop/secrets/collection/login
 ioctl failed for wlan0, errno = 19 (No such device)
 ioctl failed for wlan0, errno = 19 (No such device)
 ALSA lib pcm.c:2565:(snd_pcm_open_noupdate) Unknown PCM mic_call

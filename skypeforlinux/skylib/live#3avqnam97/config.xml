@@ -1,52 +1,52 @@
 <?xml version="1.0"?>
-<config version="1.0" serial="2" timestamp="1524121095.7">
+<config version="1.0" serial="35" timestamp="1524845347.1">
   <Lib>
     <Call>
       <ECSCCache>
         <SkypeCalling>{&#34;EarlyRinging&#34;:3,&#34;allowBrokerSubscribeBatching&#34;:true,&#34;allowCallWithBot&#34;:true,&#34;brokerExclusively&#34;:false,&#34;cacheTrouterResponses&#34;:true,&#34;conversationServiceUrl&#34;:&#34;https://api.cc.skype.com/conv/&#34;,&#34;csaCallModalityEventPrioBoost&#34;:1,&#34;csaHttpPrioBoost&#34;:1,&#34;csaTimeoutConfiguration&#34;:{&#34;udpCanaryTimeoutMs&#34;:2000},&#34;csaVideoPrioBoost&#34;:1,&#34;disableForwardingTimerOnClient&#34;:true,&#34;enableCallMerge&#34;:true,&#34;enableDnsCache&#34;:false,&#34;keyDistributionUrl&#34;:&#34;https://api.cc.skype.com/kd/&#34;,&#34;mcr&#34;:{&#34;enabled&#34;:true,&#34;getMissedCallsUrl&#34;:&#34;/clients/v1/users/skype/%destinationId%/missed-calls?anchor=&#34;,&#34;markReadStatusUrl&#34;:&#34;/clients/v1/users/skype/%destinationId%/missed-calls/%anchor%/read-status?value=read&#34;,&#34;serviceFqdn&#34;:&#34;https://api.mcr.skype.com&#34;},&#34;mediaConfiguration_ContactServerTimeoutIncrement&#34;:&#34;0&#34;,&#34;mediaConfiguration_DisableVC1&#34;:&#34;1&#34;,&#34;mediaConfiguration_DisabledPipes&#34;:&#34;2&#34;,&#34;mediaConfiguration_EnableAVMultiplexing&#34;:&#34;1&#34;,&#34;mediaConfiguration_EnableH264AVC&#34;:&#34;1&#34;,&#34;mediaConfiguration_EnableRtx&#34;:&#34;1&#34;,&#34;mediaConfiguration_IceClientVersion&#34;:&#34;6&#34;,&#34;mediaConfiguration_NAT64&#34;:&#34;1&#34;,&#34;mediaConfiguration_SimulateReinviteEnabled&#34;:&#34;1&#34;,&#34;mediaConfiguration_TransportMode&#34;:&#34;3&#34;,&#34;mediaConfiguration_TransportVersion&#34;:&#34;4&#34;,&#34;mediaConfiguration_TurnTurnFallbackEnabled&#34;:&#34;1&#34;,&#34;ngIncoming&#34;:{&#34;isBrokerEnabled&#34;:true,&#34;isUdpCanaryEnabled&#34;:true},&#34;ngOutgoing&#34;:{&#34;isBrokerEnabled&#34;:true,&#34;isEmergencyCallingEnabled&#34;:true},&#34;p2pForkDelayInMs&#34;:-1,&#34;potentialCallRequestUrl&#34;:&#34;https://api.cc.skype.com/cc/v1/potentialcall&#34;,&#34;showCqf&#34;:[{&#34;percentage&#34;:100,&#34;platformId&#34;:40000},{&#34;percentage&#34;:100,&#34;platformId&#34;:40001}],&#34;supportCompressedTrouterPayload&#34;:true,&#34;udpSignalingFastTimeoutMs&#34;:1500,&#34;udpSignalingMaxPacketSize&#34;:1470,&#34;udpSignalingRetransmitTimeoutMs&#34;:600,&#34;udpTransportUrl&#34;:&#34;udp://api.cc.skype.com:3478&#34;,&#34;useCentralizedTrouter&#34;:true}</SkypeCalling>
       </ECSCCache>
       <NG>
-        <UdpKdResponseExpiry>USOY9GUyT4AgnMpoBlineg==</UdpKdResponseExpiry>
-        <UdpKdResponseJson>HBIBPwfQn9z+EioITZPs7GRgdghr9wnoo6gjcmqoJlrdCBn47rnc5mr6cKe2LQTwN20+MkmtVGEu3o0fu21o7HWbNZ5kQJFM5gkFaRL7czT2NyKr1ZywWdx+ZnWCoYb6cw23cuErlitg7pirZZ3lCQ==</UdpKdResponseJson>
+        <UdpKdResponseExpiry>gDpSh5b3dcLS8B/XRNBLDA==</UdpKdResponseExpiry>
+        <UdpKdResponseJson>HBIBPwfQn9z+EioITZPs7GRgdghr9wnoo6gjcmqoJlobeGUyr6Eddj3WZQRAQJ6rCsjq+TFvzuYu/2uGN3JC2AsiTbpMJpjv8Z+iB1XnGyAdVhh/sBd1GZ2Yt/wjJCtjP24WidQGbZ6JamvY/xVQDA==</UdpKdResponseJson>
         <VaultType>secure</VaultType>
       </NG>
     </Call>
     <MDN>
       <RelayTokens>
-        <AcquiredTime>1524121093</AcquiredTime>
-        <ExpirationTime>1524725893</ExpirationTime>
+        <AcquiredTime>1524844479</AcquiredTime>
+        <ExpirationTime>1525449279</ExpirationTime>
         <Realms>
           <_.22realm08.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA6t0ii4+RItJLFQLIdJJ7GLx95Ko=</token1>
-            <token2>jsFkkcekdqaoTXqs6kctZggCIlI=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAj/lyVcdcqUklDPQjupcoA2uMdxc=</token1>
+            <token2>xlxmh6Jaowsok973oKYqZkcYc+c=</token2>
           </_.22realm08.22>
           <_.22realm09.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAFGD+M4HfdybeJEtp6ojvuUv2O6I=</token1>
-            <token2>LovqBdTXFGcKVGnzVa9rWE79MQ0=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAFKh68bqKzV7YMuuhqVvQpcb9C+w=</token1>
+            <token2>+QNUlT+CSGM4j0Mlnuf+SDo1f+Y=</token2>
           </_.22realm09.22>
           <_.22realm10.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAjfFBspadsW8mF77I27332Ta//bA=</token1>
-            <token2>l8LVN4fMR/xR1aZ9q4TskNSRjv4=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAVosA3D3Ze+DIzCTNuelEgBi+8d8=</token1>
+            <token2>OrPGRdaG3MmGLjo3W+9gk1L3LjA=</token2>
           </_.22realm10.22>
           <_.22realm11.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAp/aM/DqjCVkTzMOxthGt4tfbefg=</token1>
-            <token2>hf6QMdL8J4x6DWK9fuJlij9+D78=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAqHYKEnhXv3+AQATNqIzwQza7M7A=</token1>
+            <token2>aL78T1z3HcW6mA2siJSBj0MQY/8=</token2>
           </_.22realm11.22>
           <_.22realm12.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA4Ofj0VZgkSVLGarjO9KJBpyBZpY=</token1>
-            <token2>+44HWTW75xOsnBCHW6fdEBW0+Os=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA3X5EOLll+wgx85jOUqFuXOmGE4o=</token1>
+            <token2>xn1MZJsJ3EugvGWOkxM2VCSYgAE=</token2>
           </_.22realm12.22>
           <_.22realm13.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAdQeoD+NwKKVjSQrpI8TkURq1hJ8=</token1>
-            <token2>Cc/JzEamdpIcFmZprl41z83gF1c=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA0p20AHXw365V8s0Wk1NuSAb5xC8=</token1>
+            <token2>6DBRmfuMu9ssTkSN8gkhZ8fHLX0=</token2>
           </_.22realm13.22>
           <_.22realm14.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA4hL3IM3KP3IlyV1UeFMlZ3fFAX8=</token1>
-            <token2>hAMmXxOrsqmmiTwFEdC6rRgT7N4=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAJI1te1rt+P5v76TlCbf+gWFsO/8=</token1>
+            <token2>3xWcf59u0nBoJBWpktr4MgLR6jA=</token2>
           </_.22realm14.22>
           <_.22rtcmedia.22>
-            <token1>AgAAJPIaLoUB090rffKPN3vfYdRAwls9Yr2+oGgauIYAAAAAkPBXoTh//6wNcNG3WIOjc+SgmoQ=</token1>
-            <token2>XsfHXol74tvZ8I3ncJvhOW1zP9I=</token2>
+            <token1>AgAAJDVujHMB0+PAffKPN3vfYdRAwls9Yr2+oGgauIYAAAAA4eIwISPwEVIQV8cdS6oamCa5asI=</token1>
+            <token2>Kht4qLa8Wl8pLYQsriDZXmB7D0s=</token2>
           </_.22rtcmedia.22>
         </Realms>
       </RelayTokens>
@@ -58,7 +58,7 @@
       <PKstored>2</PKstored>
     </PushNotifications>
     <Trouter>
-      <ConnectionCache>{&#34;AuthTokenHash&#34;:&#34;7637f4b50d1490357b5e15b80395f46ba43aa726101f66bea2e4ebb059370b9b&#34;,&#34;ConnectedEvent&#34;:&#34;{\&#34;name\&#34;:\&#34;trouter.connected\&#34;,\&#34;args\&#34;:[{\&#34;ccid\&#34;:\&#34;H8dAWOD1dtiI\&#34;,\&#34;healthUrl\&#34;:\&#34;https:\/\/go.trouter.io:443\/v3\/h\&#34;,\&#34;id\&#34;:\&#34;AiQ3ABqT8pg9H8dAWOD1dtiI\&#34;,\&#34;reconnectUrl\&#34;:\&#34;wss:\/\/180-trouter-easia-a.drip.trouter.io:443\/v3\/c?issuer=prod-2&#38;st=1524120793844&#38;se=1524202097844&#38;sr=AAIkNwAak_KYPR_HQFjg9XbYiLu0UPn8wnIKOe1XYeXG1m8IRQDRtJUE6jPH8v5M-o0G&#38;sig=Gp7CTFCwTHPNOuGw8NWDxBCOghSaoVBuu9nOswIS3gc\&#34;,\&#34;surl\&#34;:\&#34;https:\/\/trouter-easia-a.dc.trouter.io:3443\/v3\/f\/180-trouter-easia-a.drip.trouter.io\/AiQ3ABqT8pg9H8dAWOD1dtiI\/\&#34;,\&#34;url\&#34;:\&#34;https:\/\/180-trouter-easia-a.drip.trouter.io:443\/v3\/f\/180-trouter-easia-a.drip.trouter.io\/AiQ3ABqT8pg9H8dAWOD1dtiI\/\&#34;,\&#34;se\&#34;:\&#34;1524202097844\&#34;,\&#34;ttl\&#34;:81004,\&#34;dur\&#34;:\&#34;4\&#34;}]}&#34;}</ConnectionCache>
+      <ConnectionCache>{&#34;AuthTokenHash&#34;:&#34;fcf0216d70e2ea1d81957405e941d41ca89f4b49b8cd8fd1f5d245062683c0c4&#34;,&#34;ConnectedEvent&#34;:&#34;{\&#34;name\&#34;:\&#34;trouter.connected\&#34;,\&#34;args\&#34;:[{\&#34;ccid\&#34;:\&#34;X0BJtYI0ZY9W\&#34;,\&#34;healthUrl\&#34;:\&#34;https:\/\/go.trouter.io:443\/v3\/h\&#34;,\&#34;id\&#34;:\&#34;8GgIAHGep23gX0BJtYI0ZY9W\&#34;,\&#34;reconnectUrl\&#34;:\&#34;wss:\/\/59-trouter-easia-b.drip.trouter.io:443\/v3\/c?issuer=prod-2&#38;st=1524845045147&#38;se=1524926765147&#38;sr=APBoCABxnqdt4F9ASbWCNGWPVtQKgcOcYaUG_oGR7CbxNcB1fKIxpLPQs3Lw_qPsc1Y4&#38;sig=hf17LIFo1k6qFh1PQ2e-EuImQ3dbhDcbMZj_Ia-Vy7k\&#34;,\&#34;surl\&#34;:\&#34;https:\/\/trouter-easia-b.dc.trouter.io:3443\/v3\/f\/59-trouter-easia-b.drip.trouter.io\/8GgIAHGep23gX0BJtYI0ZY9W\/\&#34;,\&#34;url\&#34;:\&#34;https:\/\/59-trouter-easia-b.drip.trouter.io:443\/v3\/f\/59-trouter-easia-b.drip.trouter.io\/8GgIAHGep23gX0BJtYI0ZY9W\/\&#34;,\&#34;se\&#34;:\&#34;1524926765147\&#34;,\&#34;ttl\&#34;:81420,\&#34;dur\&#34;:\&#34;2\&#34;}]}&#34;}</ConnectionCache>
     </Trouter>
   </Lib>
 </config>
