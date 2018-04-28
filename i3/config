@@ -2,8 +2,8 @@ for_window [class="^.*"] border pixel 3
 gaps inner 5 
 gaps outer 5
 #Basic settings
-set $mod Mod1
-set $mod4 Mod4
+set $mod Mod4
+set $mod1 Mod1
 floating_modifier $mod
 set $term termite
 #set $term urxvt
@@ -16,21 +16,21 @@ font pango:LiberationMono Sans Mono, Icons 11
 exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 
- #bar {
-	 # font pango:Inconsolata 8
-	# position top
-	 # tray_output none
-	 # status_command i3status
-	 # status_command i3blocks
- #}
+# bar {
+# font pango:Inconsolata 8
+# position top
+# tray_output none
+# status_command i3status
+# status_command i3blocks
+# }
 
 exec_always			exec bash ~/.config/polybar/launch.sh
 # exec_always 			    exec setxkbmap -option 
 exec_always                 exec --no=startup-id setxkbmap -option && xmodmap ~/.config/.Xmodmap
-bindsym $mod4+z             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
-bindsym $mod4+x             exec setxkbmap -option && xmodmap ~/.config/xmodmap/wasd.Xmodmap
+bindsym $mod1+z             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
+bindsym $mod1+x             exec setxkbmap -option && xmodmap ~/.config/xmodmap/wasd.Xmodmap
 
-bindsym $mod4+Shift+x       exec setxkbmap -option
+bindsym $mod1+Shift+x       exec setxkbmap -option
 
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return 	exec ~/.config/.i3/currentpwd.sh
@@ -56,8 +56,8 @@ bindsym $mod+Shift+w		exec --no-startup-id firefox -private-window
 bindsym $mod+p			exec evince
 bindsym $mod+Shift+p	exec --no-startup-id pinta
 bindsym $mod+e			        exec emacs
-bindsym $mod4+i                 exec ibus-daemon
-bindsym $mod4+Shift+i			      exec killall ibus-daemon
+bindsym $mod+i                 exec ibus-daemon
+bindsym $mod+Shift+i			      exec killall ibus-daemon
 #bindsym $mod+Shift+e	exec $mail
 
 bindsym $mod+r 		exec $term -e ranger
@@ -67,7 +67,7 @@ bindsym $mod+Shift+y	resize shrink width 10 px or 10ppt
 #bindsym $mod+u
 bindsym $mod+Shift+u	resize shrink height 10 px or 10 ppt
 
-bindsym $mod+Shift+i	resize grow height 10 px or 10 ppt
+# bindsym $mod+Shift+i	resize grow height 10 px or 10 ppt
 
 bindsym $mod+Shift+o	resize grow width 10 px or 10 ppt
 
@@ -80,8 +80,8 @@ bindsym XF86Calculator		exec $term -e qalc
 bindsym $mod+s		gaps inner current plus 5
 bindsym $mod+Shift+s	gaps inner current minus 5
 
-bindsym $mod+d		exec dmenu_run
-# bindsym $mod+d		exec rofi -show run
+# bindsym $mod+d		exec dmenu_run
+bindsym $mod+d		exec rofi -show run
 
 #bindsym $mod+Shift+d	gaps inner all set 0; gaps outer all set 0
 
@@ -194,19 +194,19 @@ bindsym XF86AudioStop		exec --no-startup-id mocp -G
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod4+Right exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod4+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod1+Right exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod1+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod4+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod4+Left exec --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym $mod1+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod1+Left exec --no-startup-id pactl set-sink-volume 0 -5% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym $mod4+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod1+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym $mod4+Up exec xbacklight -inc 20 # increase screen brightness
+bindsym $mod1+Up exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym $mod4+Down exec xbacklight -dec 20 # decrease screen brightness
+bindsym $mod1+Down exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
 # Rotate
@@ -225,7 +225,7 @@ bindsym $mod+Control+j exec xrandr --output LVDS1 --rotate inverted; exec i3-msg
 bindsym $mod+Control+p xrandr --output VGA1 --mode 1024x768 --same-as LVDS1
 bindsym Print 		     exec scrot -e 'cp $f ~/Pictures/output.png && mv $f ~/Pictures'
 bindsym $mod+Print 	   exec --no-startup-id scrot -e -d 2 ~/Pictures/output.png
-bindsym $mod4+Print 	   exec --no-startup-id scrot -e -d 2 ~/Pictures/output.png
+bindsym $mod1+Print 	   exec --no-startup-id scrot -e -d 2 ~/Pictures/output.png
 
 # bindsym $mod+Print 	   exec scrot -s -d 5 'cp $f ~/Pictures/output.png && cp $f ~/Pictures'
 # bindsym $mod4+Print 	 exec scrot -s -d 2 'cp $f ~/Pictures/output.png && cp $f ~/Pictures'
@@ -234,93 +234,93 @@ bindsym $mod4+Print 	   exec --no-startup-id scrot -e -d 2 ~/Pictures/output.png
 
 mode "M" {
 # mouse speed require xdotool
-    set $s1 100
-    set $s2 15
-    set $s3 50
+set $s1 100
+set $s2 15
+set $s3 50
 
-    # Mouse movement (slow/fine-tuned) -- vim keybindings
+# Mouse movement (slow/fine-tuned) -- vim keybindings
 
-    bindsym i exec xdotool mousemove 400 400
-    bindsym h exec xdotool mousemove_relative -- -$s1 0
-    bindsym j exec xdotool mousemove_relative 0 $s1
-    bindsym k exec xdotool mousemove_relative -- 0 -$s1
-    bindsym l exec xdotool mousemove_relative $s1 0
-    # bindsym i exec xdotool mousemove 400 400
-    # bindsym h exec xdotool mousemove_relative --sync -$s1 0
-    # bindsym j exec xdotool mousemove_relative --sync 0 $s1
-    # bindsym k exec xdotool mousemove_relative --sync 0 -$s1
-    # bindsym l exec xdotool mousemove_relative --sync $s1 0
+bindsym i exec xdotool mousemove 400 400
+bindsym h exec xdotool mousemove_relative -- -$s1 0
+bindsym j exec xdotool mousemove_relative 0 $s1
+bindsym k exec xdotool mousemove_relative -- 0 -$s1
+bindsym l exec xdotool mousemove_relative $s1 0
+# bindsym i exec xdotool mousemove 400 400
+# bindsym h exec xdotool mousemove_relative --sync -$s1 0
+# bindsym j exec xdotool mousemove_relative --sync 0 $s1
+# bindsym k exec xdotool mousemove_relative --sync 0 -$s1
+# bindsym l exec xdotool mousemove_relative --sync $s1 0
 
-    bindsym p exec xdotool mousemove_relative -- $s1 -$s1
-    bindsym u exec xdotool mousemove_relative -- -$s1 -$s1
-    bindsym period exec xdotool mousemove_relative -- $s1 $s1
-    bindsym n exec xdotool mousemove_relative -- -$s1 $s1
+bindsym p exec xdotool mousemove_relative -- $s1 -$s1
+bindsym u exec xdotool mousemove_relative -- -$s1 -$s1
+bindsym period exec xdotool mousemove_relative -- $s1 $s1
+bindsym n exec xdotool mousemove_relative -- -$s1 $s1
 
-    # Mouse movement (slow/fine-tuned) -- arrow keys
-    bindsym Left exec xdotool mousemove_relative -- -$s1 0
-    bindsym Down exec xdotool mousemove_relative 0 $s1
-    bindsym Up exec xdotool mousemove_relative -- 0 -$s1
-    bindsym Right exec xdotool mousemove_relative $s1 0
+# Mouse movement (slow/fine-tuned) -- arrow keys
+bindsym Left exec xdotool mousemove_relative -- -$s1 0
+bindsym Down exec xdotool mousemove_relative 0 $s1
+bindsym Up exec xdotool mousemove_relative -- 0 -$s1
+bindsym Right exec xdotool mousemove_relative $s1 0
 
-    # Mouse movement (quicker) -- vim keybindings
-    bindsym Shift+h exec xdotool mousemove_relative -- -$s2 0
-    bindsym Shift+j exec xdotool mousemove_relative 0 $s2
-    bindsym Shift+k exec xdotool mousemove_relative -- 0 -$s2
-    bindsym Shift+l exec xdotool mousemove_relative $s2 0
+# Mouse movement (quicker) -- vim keybindings
+bindsym Shift+h exec xdotool mousemove_relative -- -$s2 0
+bindsym Shift+j exec xdotool mousemove_relative 0 $s2
+bindsym Shift+k exec xdotool mousemove_relative -- 0 -$s2
+bindsym Shift+l exec xdotool mousemove_relative $s2 0
 
-    # Mouse movement (quicker) -- arrow keys
-    bindsym Shift+Left exec xdotool mousemove_relative -- -$s2 0
-    bindsym Shift+Down exec xdotool mousemove_relative 0 $s2
-    bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$s2
-    bindsym Shift+Right exec xdotool mousemove_relative $s2 0
+# Mouse movement (quicker) -- arrow keys
+bindsym Shift+Left exec xdotool mousemove_relative -- -$s2 0
+bindsym Shift+Down exec xdotool mousemove_relative 0 $s2
+bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$s2
+bindsym Shift+Right exec xdotool mousemove_relative $s2 0
 
-    # Mouse movement (fast) -- vim keybindings
-    bindsym Shift+$mod2+h exec xdotool mousemove_relative -- -$s3 0
-    bindsym Shift+$mod2+j exec xdotool mousemove_relative 0 $s3
-    bindsym Shift+$mod2+k exec xdotool mousemove_relative -- 0 -$s3
-    bindsym Shift+$mod2+l exec xdotool mousemove_relative $s3 0
+# Mouse movement (fast) -- vim keybindings
+bindsym Shift+$mod2+h exec xdotool mousemove_relative -- -$s3 0
+bindsym Shift+$mod2+j exec xdotool mousemove_relative 0 $s3
+bindsym Shift+$mod2+k exec xdotool mousemove_relative -- 0 -$s3
+bindsym Shift+$mod2+l exec xdotool mousemove_relative $s3 0
 
-    # Mouse movement (fast) -- arrow keys
-    bindsym Shift+$mod2+Left exec xdotool mousemove_relative -- -$s3 0
-    bindsym Shift+$mod2+Down exec xdotool mousemove_relative 0 $s3
-    bindsym Shift+$mod2+Up exec xdotool mousemove_relative -- 0 -$s3
-    bindsym Shift+$mod2+Right exec xdotool mousemove_relative $s3 0
-    # Left Click
-    bindsym f exec xdotool click 1
-    bindsym m exec xdotool click 1
-    # bindsym Escape mode "default"
-    bindsym d exec xdotool click 2
-    bindsym s exec xdotool click 3
-    # Left Click-and-drag f move and F
-    bindsym Shift+f exec xdotool mousedown 1
-    bindsym x       exec xdotool mousedown 1
-    # Middle Click-and-drag 
-    bindsym Shift+d exec xdotool mousedown 2
-    # Right Click-and-drag
-    bindsym Shift+s exec xdotool mousedown 3
-    # Left Drag release
-    bindsym $mod+f exec xdotool mouseup 1
-    # Middle Drag release
-    bindsym $mod+d exec xdotool mouseup 2
-    # Right Drag release
-    bindsym $mod+s exec xdotool mouseup 3
+# Mouse movement (fast) -- arrow keys
+bindsym Shift+$mod2+Left exec xdotool mousemove_relative -- -$s3 0
+bindsym Shift+$mod2+Down exec xdotool mousemove_relative 0 $s3
+bindsym Shift+$mod2+Up exec xdotool mousemove_relative -- 0 -$s3
+bindsym Shift+$mod2+Right exec xdotool mousemove_relative $s3 0
+# Left Click
+bindsym f exec xdotool click 1
+bindsym m exec xdotool click 1
+# bindsym Escape mode "default"
+bindsym d exec xdotool click 2
+bindsym s exec xdotool click 3
+# Left Click-and-drag f move and F
+bindsym Shift+f exec xdotool mousedown 1
+bindsym x       exec xdotool mousedown 1
+# Middle Click-and-drag 
+bindsym Shift+d exec xdotool mousedown 2
+# Right Click-and-drag
+bindsym Shift+s exec xdotool mousedown 3
+# Left Drag release
+bindsym $mod+f exec xdotool mouseup 1
+# Middle Drag release
+bindsym $mod+d exec xdotool mouseup 2
+# Right Drag release
+bindsym $mod+s exec xdotool mouseup 3
 
-    # stardict
-    bindsym $mod+n		     exec stardict -h 
-    bindsym $mod+Shift+n     exec killall stardict
-    # return to normal keybindings -- IMPORTANT!!
+# stardict
+bindsym $mod+n		     exec stardict -h 
+bindsym $mod+Shift+n     exec killall stardict
+# return to normal keybindings -- IMPORTANT!!
 
-    bindsym Escape mode "default"
-    bindsym $mod mode "default"
-    bindsym $mod4 mode "default"
-    bindsym $mod4+m mode "default"
-    bindsym $mod+m mode "default"
+bindsym Escape mode "default"
+bindsym $mod mode "default"
+bindsym $mod1 mode "default"
+bindsym $mod1+m mode "default"
+bindsym $mod+m mode "default"
 }
 
 #  team-viewer
 mode "team" {
-    bindsym $mod+Shift+t mode "default"
+bindsym $mod+Shift+t mode "default"
 }
 bindsym $mod+m mode "M"
 bindsym $mod+Shift+t mode "team"
-bindsym $mod4+m mode "M"
+bindsym $mod1+m mode "M"
