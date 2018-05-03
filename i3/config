@@ -104,8 +104,8 @@ bindsym $mod+Shift+k	    move up 30
 bindsym $mod+l              focus right
 bindsym $mod+Shift+l        move right 30
 
-bindsym $mod+z		        gaps outer current plus 5
-bindsym $mod+Shift+z	    gaps outer current minus 5
+# bindsym $mod+z		        gaps outer current plus 5
+# bindsym $mod+Shift+z	    gaps outer current minus 5
 
 # bindsym $mod+Shift+q 	exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+q	kill
