@@ -24,11 +24,11 @@ exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 # status_command i3blocks
 # }
 
-exec_always			exec bash ~/.config/polybar/launch.sh
-# exec_always 			    exec setxkbmap -option 
-exec_always                 exec --no=startup-id setxkbmap -option && xmodmap ~/.config/.Xmodmap
+exec_always                exec bash ~/.config/polybar/launch.sh
+# exec_always 			   exec setxkbmap -option 
+exec_always                exec --no=startup-id setxkbmap -option && xmodmap ~/.config/.Xmodmap
 bindsym $mod+z             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
-bindsym $mod1+x             exec setxkbmap -option && xmodmap ~/.config/xmodmap/wasd.Xmodmap
+bindsym $mod1+x            exec setxkbmap -option && xmodmap ~/.config/xmodmap/wasd.Xmodmap
 
 bindsym $mod1+Shift+x       exec setxkbmap -option
 
@@ -204,9 +204,9 @@ bindsym $mod+0 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym $mod1+Up exec xbacklight -inc 20 # increase screen brightness
+bindsym $mod+Up exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym $mod1+Down exec xbacklight -dec 20 # decrease screen brightness
+bindsym $mod+Down exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
 # Rotate
