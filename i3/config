@@ -28,7 +28,6 @@ exec_always                exec bash ~/.config/polybar/launch.sh
 # exec_always 			   exec setxkbmap -option 
 exec_always                exec --no=startup-id setxkbmap -option && xmodmap ~/.config/.Xmodmap
 bindsym $mod+z             exec setxkbmap -option && xmodmap ~/.config/.Xmodmap
-bindsym $mod1+x            exec setxkbmap -option && xmodmap ~/.config/xmodmap/wasd.Xmodmap
 
 bindsym $mod1+Shift+x       exec setxkbmap -option
 
